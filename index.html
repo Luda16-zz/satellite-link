@@ -1,0 +1,72 @@
+<script>
+//funciones de calculadora en Js
+
+
+/* si se tiene  una estacion terrena con una antena de 4 mts de diametro alimentado por una potencia de 100 w frecuencia de subida de 
+14 GHz, esta radiada al satelite GEO a 36.000 km, el angulo de recepcion es la antena del satelite que es O3db=2° 
+La frecuencia del satelite es de 55% y la estacion terrena de 65% en  el satelite la potencia es 20w, frecuencia de trabajo es igual a 12 Ghz que se irradia
+con un O3db=4°, la antena de la estacion terrena tiene un diametro de 6 mts con eficiencia de 60% la del satelite es 55% 
+
+Enlace de subida
+Calcular la ganancia de la antena
+
+*/
+function ganancia_antena(efictierra,diametro,frecuencia_up,frecuencia_up_hz){
+//var pi = 3.1416;
+var pi=Math.PI;
+var efictierra =efictierra; //eficiencia antena en tierra
+frecuencia_up; //frecuencia de subida 
+diametro;//metros del diametro
+frecuencia_up_hz;//unidad de la frecuencia de subida
+var valorFrecuencia= escala_hertz(frecuencia_up,frecuencia_up_hz); //transformo el valor segun la unidad correspondiente
+var constante=3000000;
+var ganancia=efictierra*(Math.pow((pi*diametro*valorFrecuencia/constante),2));
+
+var ganancia_total= Math.log10(ganancia)*10;
+return ganancia_total;
+
+}
+
+
+
+
+
+
+function escala_hertz(valor,unidad){
+	if(unidad=="hertz"){
+			var valortotal=valor*1;
+		}
+
+	if (unidad=="kilohertz"){
+
+    var valortotal=valor*1000;
+		}
+
+	if (unidad=="megahertz"){
+
+    var valortotal=valor*1000000;
+		}
+		
+if (unidad=="gigahertz"){
+
+    var valortotal=valor*1000000000;
+		}
+
+
+	if (unidad=="terahertz"){
+
+    var valortotal=valor*1000000000000;
+		}
+
+		if (unidad=="petahertz"){
+
+    var valortotal=valor*1000000000000000;
+		}
+
+return valortotal;
+}
+
+
+
+
+</script> 
