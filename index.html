@@ -22,7 +22,7 @@ var valorFrecuencia= escala_hertz(frecuencia_up,frecuencia_up_hz); //transformo 
 var constante=3000000;
 var ganancia=efictierra*(Math.pow((pi*diametro*valorFrecuencia/constante),2));
 
-var ganancia_total= Math.log10(ganancia)*10;
+var ganancia_total= 10*Math.log10(ganancia);
 return ganancia_total;
 
 }
@@ -39,6 +39,58 @@ var pire=ganancia+potenciatx;
 return pire;
 
 }
+
+
+/*  Calculador de densidad 
+ * 
+ * Falta aca  */
+
+//Calculo potencia de recepcion
+//punto 5 ejercicio 1
+function potencia_recepcion(variable,distancia,frecuencia){
+	var fsl0=variable+20*Math.log(distancia);
+	var fsl1=20*Math.log(frecuencia);
+	var fsl=fsl0+fsl1;
+	
+	return fsl;
+	
+}
+
+//punto 6
+function ganancia_antena_receptora(diametro,frecuencia,eficiencia_sat){
+	var valor_pie=3.28*diametro; //valor de metro a pie
+	var gpx=20*Math.log(valor_pie)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49,92;//aun no se que carajo es 49,92?. Constante o Variable?
+
+return gpx;	 
+}
+
+
+//punto 7
+function pot_recepcion(pire,fsl,gpx){
+	var psl=pire+(-fsl)+gpx;
+	return psl;
+}
+
+//punto 8 
+//calculamos figura merito
+
+function calculo_figura(gpx){
+	
+	var calc_figura=gpx-10*Math.log(290);//de donde carajo se saca el 290?
+	return calc_figura;
+}
+
+//punto 9
+function last(pire,fsl,calc_figura){
+	var k=Math.pow(10,-23);
+var boltzman=1.3806*k;
+ var fin=pire-fsl+calc_figura-boltzman;
+ 
+ return fin;
+	
+}
+
+
 
 
 function escala_hertz(valor,unidad){
