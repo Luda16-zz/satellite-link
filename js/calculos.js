@@ -1,4 +1,5 @@
 
+<script>
 //funciones de calculadora en Js
 
 
@@ -10,38 +11,52 @@ con un O3db=4°, la antena de la estacion terrena tiene un diametro de 6 mts con
 Enlace de subida
 Calcular la ganancia de la antena
 
+
 */
+
+/* Formulas
+ * 
+ * Free Space Path Loss (FSPL)
+ * (4*PI*D*F/C)elevado al cuadrado
+ * D: es la distancia del receptor al transmisor (metros)
+ * F: intensidad en frecuencia (Hertz)
+ * C: velocidad de la luz en el vacio (metros por segundos) */
+
 function ganancia_antena(efictierra,diametro,frecuencia_up,frecuencia_up_hz){
 //var pi = 3.1416;
-	var pi=Math.PI;
-	var efictierra =efictierra; //eficiencia antena en tierra
-	frecuencia_up; //frecuencia de subida 
-	diametro;//metros del diametro
-	frecuencia_up_hz;//unidad de la frecuencia de subida
-	var valorFrecuencia= escala_hertz(frecuencia_up,frecuencia_up_hz); //transformo el valor segun la unidad correspondiente
-	var constante=3000000;
-	var ganancia=efictierra*(Math.pow((pi*diametro*valorFrecuencia/constante),2));
+var pi=Math.PI;
+var efictierra =efictierra; //eficiencia antena en tierra
+frecuencia_up; //frecuencia de subida 
+diametro;//metros del diametro
+frecuencia_up_hz;//unidad de la frecuencia de subida
+var valorFrecuencia= escala_hertz(frecuencia_up,frecuencia_up_hz); //transformo el valor segun la unidad correspondiente
+var velocidad_luz=300000000;
+var ganancia=efictierra*(Math.pow((pi*diametro*valorFrecuencia/velocidad_luz),2));
 
-	var ganancia_total= 10*Math.log10(ganancia);
-	return ganancia_total;
+var ganancia_total= 10*Math.log10(ganancia);
+return ganancia_total;
 
 }
 
 
 function potenciatx(pot){
 
-	var potenciatotal=10*Math.log10(pot);
-	return potenciatotal;
+var potenciatotal=10*Math.log10(pot);
+return potenciatotal;
 }
 
-function getPire(ganancia,potenciatx){
-	var pire=ganancia+potenciatx;
-	return pire;
+//Calculadora EIRP
+/* http://www.pasternack.com/t-calculator-eirp.aspx */
+function getPire(potenciatx,ganancia,losscable){
+var pire=potenciatx-losscable+ganancia;
+return pire;
 
 }
 
 
-/*  Calculador de densidad    */
+/* Power Density Calculator
+ * http://www.pasternack.com/t-calculator-power-density.aspx
+ *     */
 
 function densidadmaxima(potenciatx,ganancia,distancia){
 	var pi=Math.PI;
@@ -87,8 +102,8 @@ function calculo_figura(gpx){
 //punto 9
 function last(pire,fsl,calc_figura){
 	var k=Math.pow(10,-23);
-	var boltzman=1.3806*k;
- 	var fin=pire-fsl+calc_figura-boltzman;
+var boltzman=1.3806*k;
+ var fin=pire-fsl+calc_figura-boltzman;
  
  return fin;
 	
@@ -104,32 +119,34 @@ function escala_hertz(valor,unidad){
 
 	if (unidad=="kilohertz"){
 
-    	var valortotal=valor*1000;
+    var valortotal=valor*1000;
 		}
 
 	if (unidad=="megahertz"){
 
-    	var valortotal=valor*1000000;
+    var valortotal=valor*1000000;
 		}
 		
-	if (unidad=="gigahertz"){
+if (unidad=="gigahertz"){
 
-    	var valortotal=valor*1000000000;
+    var valortotal=valor*1000000000;
 		}
 
 
 	if (unidad=="terahertz"){
 
-    	var valortotal=valor*1000000000000;
+    var valortotal=valor*1000000000000;
 		}
 
 		if (unidad=="petahertz"){
 
-    	var valortotal=valor*1000000000000000;
+    var valortotal=valor*1000000000000000;
 		}
 
-	return valortotal;
+return valortotal;
 }
 
 
 
+
+</script> 
