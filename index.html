@@ -1,23 +1,127 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
+<!DOCTYPE html>
+<html>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<head>
+    <title>Calculadora de Enlaces Satelitales | Universidad de Pamplona</title>
+    <meta charset="UTF-8">
+    <!-- Le decimos al navegador que nuestra web esta optimizada para moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <body>
-      <div></div>
+    <!-- Cargamos el CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+</head>
 
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/calculos.min.js"></script>
-    </body>
-  </html>
-        
+<body>
+    <header class="z-depth-1">
+        <nav class="top-nav blue darken-1">
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <ul class="side-nav fixed grey darken-4" id="mobile-demo">
+                    <li><a href="index.html" class="waves-effect">Home</a>
+                    </li>
+                    <li><a href="pages/up-pire.html" class="waves-effect">Enlaces Satelitales</a>
+                    </li>
+                    <li><a href="pages/tab-menu.html" class="waves-effect">Calculadora</a>
+                    </li>
+                    <li><a href="" class="waves-effect">Historia</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <img src="img/escudounipamplona.png" alt="Universidad de Pamplona" class="logo responsive-img logo-uni">
+        <h1 class="white-text"><strong>Universidad de Pamplona</strong></h1>
+
+
+
+        <a href="#" class="btn-floating btn-large waves-effect waves-light teal lighten-1">
+            <i class="mdi-navigation-expand-more"></i>
+        </a>
+    </header>
+    <main>
+        <section id="portfolio" class="portfolio teal lighten-3">
+            <div class="container">
+                <h4 class="teal-text">Calculadora de Enlaces Satelitales</h4>
+                <hr class="teal-text">
+                <div class="row">
+                    <div class="col s12 m12 l12 portfolio-holder">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="" class=" parallax-container">
+            
+        </section>
+
+       
+
+        <section id="contacto" class="contacto">
+            <div class="container">
+                <h4>contacto</h4>
+                <hr>
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <i class="mdi-action-account-circle prefix"></i>
+                                        <input id="first_name" type="text" class="validate">
+                                        <label for="first_name">Nombre</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">Apellido</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="mdi-communication-email prefix"></i>
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">E-Mail</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="mdi-communication-comment prefix"></i>
+                                        <textarea id="mensaje" class="materialize-textarea" required></textarea>
+                                        <label for="mensaje">Mensaje</label>
+                                    </div>
+                                </div>
+
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 offset-m1 contact-holder">
+                        <h6 class="mdi-action-home">Dirección</h6>
+                        <p>C/Megadrive, Nº7</p>
+                        <h6 class="mdi-hardware-phone-android">Móvil</h6>
+                        <p>999 999 999</p>
+                        <h6 class="mdi-action-open-in-browser">Web</h6>
+                        <p>funnyfrontend.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer blue darken-4">
+        <div class="footer-copyright">
+            <div class="container">
+                Univiversidad de Pamplona - Colombia
+                <a class="grey-text text-lighten-4 right" href="http://www.unipamplona.edu.co/">Web</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Cargamos jQuery y materialize js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/feel.js"></script>
+    
+</body>
+
+</html>
