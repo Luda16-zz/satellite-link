@@ -13,39 +13,31 @@
 </head>
 
 <body>
-    <header class="z-depth-1">
-        <nav class="top-nav blue darken-1">
-            <div class="nav-wrapper">
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-                <ul class="side-nav fixed grey darken-4" id="mobile-demo">
-                    <li><a href="index.html" class="waves-effect">Home</a>
-                    </li>
-                    <li><a href="pages/up-pire.html" class="waves-effect">Enlaces Satelitales</a>
-                    </li>
-                    <li><a href="pages/tab-menu.html" class="waves-effect">Calculadora</a>
-                    </li>
-                    <li><a href="" class="waves-effect">Historia</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <img src="img/escudounipamplona.png" alt="Universidad de Pamplona" class="logo responsive-img logo-uni">
-        <h1 class="white-text"><strong>Universidad de Pamplona</strong></h1>
+    <nav class="blue darken-4">
+      
+      <ul id="slide-out" class="side-nav">
+        <li><a href="#!">Inicio</a></li>
+        <li><a href="pages/tab-menu.html">Recursos</a></li>
+        <li><a href="pages/up-pire.html">Calculadora Satelital</a></li>
+        <li><a href="#!">Videos</a></li>
 
-
-
-        <a href="#" class="btn-floating btn-large waves-effect waves-light teal lighten-1">
-            <i class="mdi-navigation-expand-more"></i>
-        </a>
-    </header>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+    </nav>    
     <main>
-        <section id="portfolio" class="portfolio teal lighten-3">
+        <section id="homeBrand" class="home-brand" > 
+            <img src="img/escudounipamplona.png" alt="Universidad de Pamplona" class="logo responsive-img logo-uni">
+            <h1 class="white-text"><strong>Universidad de Pamplona</strong></h1>
+        </section>
+        <section id="homeDescription" class="home-description">
             <div class="container">
-                <h4 class="teal-text">Calculadora de Enlaces Satelitales</h4>
-                <hr class="teal-text">
+                <h4 class="text">Calculadora de Enlaces Satelitales</h4>
+                <hr class="text">
                 <div class="row">
                     <div class="col s12 m12 l12 portfolio-holder">
-                        
+                        <p>Lucas ipsum dolor sit amet cracken kubaz arvel obi-wan omwati secura jan verpine kamino umbaran. Rugor cabasshite endor bria doldur organa. Barriss dug tof sesswenna naberrie dantooine arkanis emtrey. Maul jerec su dantari trandoshan corran naberrie. Theelin y'bith hallotan haruun jax klaatu rattatak antilles. C-3po calamari nunb sebulba. Tython aleena lyn gavyn porkins. Oppo hutt rakata even ranat briqualon. Endocott padmé draethos zuckuss tapani solo. Fel tyranus wedge habassa deliah jan droopy nagai. </p>
+
+                        <p>Draethos haruun bothan jettster ozzel. Valorum quence coway fel desolous. Rugor koon terrik kwi fel. Derlin darth adi bertroff aayla cerean. Dashade wuher sanyassan owen luminara cerea tano y'bith. Tsavong kessel yoda utapau nomi mirialan t88. Ferroans vima-da-boda ugnaught unduli galen boltrunians ansion. Zorba katarn drovian aleena. Chirrpa shi'ido greeata allie. Dooku tono organa dooku kyle ailyn vebb conan boss. Isard c-3p0 ansuroer obi-wan baba khai amidala djo taun. Sabé plagueis biggs omwati. </p>
                     </div>
                 </div>
             </div>
@@ -54,60 +46,7 @@
         <section id="" class=" parallax-container">
             
         </section>
-
-       
-
-        <section id="contacto" class="contacto">
-            <div class="container">
-                <h4>contacto</h4>
-                <hr>
-                <div class="row">
-                    <div class="col s12 m7">
-                        <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <i class="mdi-action-account-circle prefix"></i>
-                                        <input id="first_name" type="text" class="validate">
-                                        <label for="first_name">Nombre</label>
-                                    </div>
-                                    <div class="input-field col s6">
-                                        <input id="last_name" type="text" class="validate">
-                                        <label for="last_name">Apellido</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-communication-email prefix"></i>
-                                        <input id="email" type="email" class="validate">
-                                        <label for="email">E-Mail</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="mdi-communication-comment prefix"></i>
-                                        <textarea id="mensaje" class="materialize-textarea" required></textarea>
-                                        <label for="mensaje">Mensaje</label>
-                                    </div>
-                                </div>
-
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-                                    <i class="mdi-content-send right"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col s12 m4 offset-m1 contact-holder">
-                        <h6 class="mdi-action-home">Dirección</h6>
-                        <p>C/Megadrive, Nº7</p>
-                        <h6 class="mdi-hardware-phone-android">Móvil</h6>
-                        <p>999 999 999</p>
-                        <h6 class="mdi-action-open-in-browser">Web</h6>
-                        <p>funnyfrontend.com</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+               
     </main>
     <footer class="page-footer blue darken-4">
         <div class="footer-copyright">
@@ -116,7 +55,7 @@
                 <a class="grey-text text-lighten-4 right" href="http://www.unipamplona.edu.co/">Web</a>
             </div>
         </div>
-    </footer>
+    </footer>     
     <!-- Cargamos jQuery y materialize js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

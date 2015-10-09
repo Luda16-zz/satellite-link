@@ -7,19 +7,14 @@ html {
     font-size: 16px
 }
 
-header {
+.home-brand {
     text-align: center;
     padding: 2em;
     background-image: url("../img/background.jpg");
 }
 
-header,
-main,
-footer {
-    padding-left: 240px;
-}
 
-header .logo {
+.home-brand .logo {
     margin-left: 20px;
     height: 300px;
 }
@@ -29,26 +24,11 @@ h1 {
     line-height: 25px
 }
 
-header .btn-floating {
+.home-brand .btn-floating {
     position: relative;
     margin: 0 auto;
     display: block;
     top: 58px;
-}
-
-header nav {
-    box-shadow: none;
-    width: 100%;
-}
-
-header nav ul li a {
-    position: relative;
-    color: #fff;
-    letter-spacing: -1px;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 1.7rem;
-    margin: 0 25px;
 }
 
 .button-collapse {

@@ -13,9 +13,17 @@
 </head>
 
 <body>
-    <header class="z-depth-1">
-       
-    </header>
+   <nav class="blue darken-4">
+      
+      <ul id="slide-out" class="side-nav">
+        <li><a href="#!">Inicio</a></li>
+        <li><a href="/pages/tab-menu.html">Recursos</a></li>
+        <li><a href="/pages/up-pire.html">Calculadora Satelital</a></li>
+        <li><a href="#!">Videos</a></li>
+
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+    </nav>   
     <main>                 
 
         <section id="contacto" class="contacto">
@@ -28,9 +36,22 @@
                             <form class="col s12">
                                 <div class="row">
                                     <div class="input-field col s6">
-                                        <i class="prefix"></i>
-                                        <input  type="text" class="validate">
-                                        <label for="">Numero</label>
+                                        <input  type="number" class="validate">
+                                        
+                                        <!-- Dropdown Trigger -->
+                                        <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+                                        <!-- Dropdown Structure -->
+                                        <ul id='dropdown1' class='dropdown-content'>
+                                            <li><a href="#!">one</a></li>
+                                            <li><a href="#!">two</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#!">three</a></li>
+                                        </ul>
+        
+
+                                            
+
                                     </div>
                                     <div class="input-field col s6">
                                         <input  type="text" class="validate">
