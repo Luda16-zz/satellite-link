@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <!-- Le decimos al navegador que nuestra web esta optimizada para moviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+    <script src="../js/calculos.js"> </script>
     <!-- Cargamos el CSS -->
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../css/custom.css" />
@@ -47,26 +47,26 @@
                                             <li><a href="#!">dbw</a></li>
                                         </ul>
                                     <div class="input-field col s6">
-                                        <input  type="text" class="validate">
+                                        <input  type="text" class="validate" id="potx" value="">
                                         <label for="">Potencia de Antena:</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s6">
                                         
-                                        <input  type="text" class="validate">
+                                        <input  type="text" class="validate" id="lossc" value="">
                                         <label for="">Perdida de Cable (dB):</label>
                                     </div>
                                 </div>    
                              
                                 <div class="row">
                                     <div class="input-field col s6">
-                                        <input  type="text" class="validate">
+                                        <input  type="text" class="validate" id="gananc" value="">
                                         <label for="">Ganancia de Antena (dBI):</label>                                                                                
                                     </div>
                                 </div>
 
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Calcular
+                                <button class="btn waves-effect waves-light" type="submit" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
                             </form>
