@@ -1,5 +1,5 @@
 
-<script>
+
 //funciones de calculadora en Js
 
 
@@ -70,9 +70,16 @@ return potenciatotal;
 
 //Calculadora EIRP
 /* http://www.pasternack.com/t-calculator-eirp.aspx */
-function getPire(potenciatx,ganancia,losscable){
-var pire=potenciatx-losscable+ganancia;
-return pire;
+function getPire(){
+var potenciatx=document.getElementById('potx').value;
+var ganancia=document.getElementById('gananc').value;
+var losscable=document.getElementById('lossc').value;
+var val_pire=potenciatx-losscable+parseInt(ganancia);;
+calculos_result.pire=val_pire;
+document.getElementById("valpire").innerHTML=calculos_result.pire
+
+
+//return pire;
 
 }
 
@@ -109,7 +116,7 @@ return valor;
 //punto 6
 function ganancia_antena_receptora(valmts,frecuencia,eficiencia_sat){
 	var valor_pie=3.28*valmts; //valor de metro a pie
-	var gpx=20*Math.log(valor_pie)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49,92;//aun no se que carajo es 49,92?. Constante o Variable?
+	var gpx=20*Math.log(valor_pie)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49.92;//aun no se que carajo es 49,92?. Constante o Variable?
 
 return gpx;	 
 }
@@ -200,5 +207,3 @@ if(unidad=="dbw"){
 
 
 
-
-</script> 
