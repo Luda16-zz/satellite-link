@@ -33,6 +33,13 @@ Object.defineProperty(calculos_result,'pot_recept', {value: '0', writable:true, 
 Object.defineProperty(calculos_result,'figura', {value: '0', writable:true, enumerable:true, configurable:true});
 Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumerable:true, configurable:true});
 
+Object.defineProperty(calculos_result, 'temp', {value:'0',
+  get: function() { return temp; },
+  set: function(newValue) { bValue = newValue; },
+  enumerable: true,
+  configurable: true
+});
+
 function fspl_decibels(){
 var pi=Math.PI;
 var velocidad_luz=300000000;
@@ -41,6 +48,7 @@ var frecuencia=document.getElementById('frecue').value;
 var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
 var valordb=10*Math.log10(valor);
 calculos_result.fspldecibels=valordb;
+//localStorage["distancia"] =distancia; esto sirve para guardar 
 document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
 //return valor;	
 	
@@ -117,9 +125,14 @@ document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 }*/
 
 //Funcion que esta en el punto 5
-function fsl1(distancia_kms,frecuencia_mhz){
-	valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
-return valor;
+function fsl_segundo(){
+	
+	var distancia_kms=document.getElementById('distancia1').value;
+	var frecuencia_mhz=document.getElementById('frecuencia1').value;
+	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
+	calculos_result.fsl1=valor;
+	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
+//return valor;
 	
 }
 
