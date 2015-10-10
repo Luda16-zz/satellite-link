@@ -22,10 +22,21 @@ Calcular la ganancia de la antena
  * F: intensidad en frecuencia (Hertz)
  * C: velocidad de la luz en el vacio (metros por segundos) */
 
-function ganancia_antena(efictierra,diametro,frecuencia_up,frecuencia_up_hz){
+function fspl_decibels (distancia, frecuencia){
+var pi=Math.PI;
+var velocidad_luz=300000000;
+
+var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
+var valordb=10*Math.log10(valor);
+return valor;	
+	
+}
+
+
+/* function ganancia_antena(efictierra,diametro,frecuencia_up,frecuencia_up_hz){
 //var pi = 3.1416;
 var pi=Math.PI;
-var efictierra =efictierra; //eficiencia antena en tierra
+//var efictierra =efictierra; //eficiencia antena en tierra
 frecuencia_up; //frecuencia de subida 
 diametro;//metros del diametro
 frecuencia_up_hz;//unidad de la frecuencia de subida
@@ -36,7 +47,8 @@ var ganancia=efictierra*(Math.pow((pi*diametro*valorFrecuencia/velocidad_luz),2)
 var ganancia_total= 10*Math.log10(ganancia);
 return ganancia_total;
 
-}
+} */
+
 
 
 function potenciatx(pot){
@@ -66,14 +78,23 @@ var densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
 
 //Calculo potencia de recepcion
 //punto 5 ejercicio 1
-function potencia_recepcion(variable,distancia,frecuencia){
+/*function potencia_recepcion(variable,distancia,frecuencia){
 	var fsl0=variable+20*Math.log(distancia);
 	var fsl1=20*Math.log(frecuencia);
 	var fsl=fsl0+fsl1;
 	
 	return fsl;
 	
+}*/
+
+//Funcion que esta en el punto 5
+function fsl1(distancia_kms,frecuencia_mhz){
+	valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
+return valor;
+	
 }
+
+
 
 //punto 6
 function ganancia_antena_receptora(diametro,frecuencia,eficiencia_sat){
@@ -84,22 +105,24 @@ return gpx;
 }
 
 
+
 //punto 7
-function pot_recepcion(pire,fsl,gpx){
+function potencia_recepcion(pire,fsl,gpx){
 	var psl=pire+(-fsl)+gpx;
 	return psl;
 }
 
 //punto 8 
 //calculamos figura merito
-
-function calculo_figura(gpx){
-	
-	var calc_figura=gpx-10*Math.log(290);//de donde carajo se saca el 290?
+function calculo_figura(gpx,temp_kelvin){
+	//temp = system noise temperature	
+	var calc_figura=gpx-10*Math.log(temp);
 	return calc_figura;
 }
 
 //punto 9
+//C/NO
+
 function last(pire,fsl,calc_figura){
 	var k=Math.pow(10,-23);
 var boltzman=1.3806*k;
@@ -147,6 +170,22 @@ return valortotal;
 }
 
 
+function escala_watts(valor, unidad){
+	if(unidad=="watts"){
+		var valortotal=valor*1;
+	}
+if(unidad=="milliwatts"){
+	var valortotal=valor*1000;
+}	
 
+if(unidad=="dbm"){
+	var valortotal=10*Math.log10(1000*valor);
+}
+
+if(unidad=="dbw"){
+	var valortotal=10*Math.log10(valor);
+}
+	return valortotal;
+}
 
 </script> 
