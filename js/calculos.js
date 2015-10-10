@@ -22,6 +22,17 @@ Calcular la ganancia de la antena
  * F: intensidad en frecuencia (Hertz)
  * C: velocidad de la luz en el vacio (metros por segundos) */
 
+var calculos_result={};
+
+Object.defineProperty(calculos_result,'fspldecibels', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'pire', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'densidad', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'fsl1', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'gan_anten_reci', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'pot_recept', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'figura', {value: '0', writable:true, enumerable:true, configurable:true});
+Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumerable:true, configurable:true});
+
 function fspl_decibels (distancia, frecuencia){
 var pi=Math.PI;
 var velocidad_luz=300000000;
@@ -95,10 +106,9 @@ return valor;
 }
 
 
-
 //punto 6
-function ganancia_antena_receptora(diametro,frecuencia,eficiencia_sat){
-	var valor_pie=3.28*diametro; //valor de metro a pie
+function ganancia_antena_receptora(valmts,frecuencia,eficiencia_sat){
+	var valor_pie=3.28*valmts; //valor de metro a pie
 	var gpx=20*Math.log(valor_pie)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49,92;//aun no se que carajo es 49,92?. Constante o Variable?
 
 return gpx;	 
@@ -187,5 +197,8 @@ if(unidad=="dbw"){
 }
 	return valortotal;
 }
+
+
+
 
 </script> 
