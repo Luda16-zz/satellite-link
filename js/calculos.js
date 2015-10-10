@@ -33,13 +33,16 @@ Object.defineProperty(calculos_result,'pot_recept', {value: '0', writable:true, 
 Object.defineProperty(calculos_result,'figura', {value: '0', writable:true, enumerable:true, configurable:true});
 Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumerable:true, configurable:true});
 
-function fspl_decibels (distancia, frecuencia){
+function fspl_decibels(){
 var pi=Math.PI;
 var velocidad_luz=300000000;
-
+var distancia = document.getElementById('dist').value;
+var frecuencia=document.getElementById('frecue').value;
 var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
 var valordb=10*Math.log10(valor);
-return valor;	
+calculos_result.fspldecibels=valordb;
+document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
+//return valor;	
 	
 }
 
@@ -88,9 +91,17 @@ document.getElementById("valpire").innerHTML=calculos_result.pire
  * http://www.pasternack.com/t-calculator-power-density.aspx
  *     */
 
-function densidadmaxima(potenciatx,ganancia,distancia){
+function densidadmaxima(){
 	var pi=Math.PI;
-var densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+	var potenciatx=document.getElementById('potantena').value;
+	var ganancia=document.getElementById('gain').value;
+	var distancia=document.getElementById('distancia').value;
+	var val1=4*pi*Math.pow(distancia,2);
+	var val2=potenciatx*ganancia;
+	var val3=val2/val1;
+//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+calculos_result.densidad=val3;
+document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
 }
 
