@@ -74,7 +74,7 @@ function getPire(){
 var potenciatx=document.getElementById('potx').value;
 var ganancia=document.getElementById('gananc').value;
 var losscable=document.getElementById('lossc').value;
-var val_pire=potenciatx-losscable+parseInt(ganancia);;
+var val_pire=potenciatx-losscable+parseFloat(ganancia);;
 calculos_result.pire=val_pire;
 document.getElementById("valpire").innerHTML=calculos_result.pire
 
