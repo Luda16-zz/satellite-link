@@ -128,15 +128,37 @@ document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 function fsl_segundo(){
 	
 	var distancia_kms=document.getElementById('distancia1').value;
+		//alert(document.getElementById('units').options[document.getElementById('units').selectedIndex].text);
+	indice=document.formulario.units.selectedIndex; 
+	unidad=document.formulario.units.options[indice].value;
+	var distanciafinal=conversion_longitud(distancia_kms,unidad);
+	//alert(distancafinal);
 	var frecuencia_mhz=document.getElementById('frecuencia1').value;
-	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
+	var valor = 20*Math.log10(distanciafinal)+20*Math.log10(frecuencia_mhz)+32.45;
 	calculos_result.fsl1=valor;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
 //return valor;
 	
 }
 
-
+function conversion_longitud(valor,unidad){
+	if (unidad=="Kms"){
+		result=valor*1;
+	}
+	if (unidad=="Meters"){
+		result=valor*0.001;
+	}
+	
+	if (unidad=="Miles"){
+		result=valor*1.60934;
+	}
+	
+	if (unidad=="Feet"){
+		result=valor*0.0003048;
+	}
+	
+	return result;
+}
 //punto 6
 function ganancia_antena_receptora(valmts,frecuencia,eficiencia_sat){
 	var valor_pie=3.28*valmts; //valor de metro a pie
