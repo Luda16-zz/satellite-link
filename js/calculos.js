@@ -47,6 +47,7 @@ var distancia = document.getElementById('dist').value;
 var frecuencia=document.getElementById('frecue').value;
 var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
 var valordb=10*Math.log10(valor);
+valordb=valordb.toFixed(3);
 calculos_result.fspldecibels=valordb;
 //localStorage["distancia"] =distancia; esto sirve para guardar 
 document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
@@ -85,7 +86,8 @@ function getPire(){
 var potenciatx=document.getElementById('potx').value;
 var ganancia=document.getElementById('gananc').value;
 var losscable=document.getElementById('lossc').value;
-var val_pire=potenciatx-losscable+parseFloat(ganancia);;
+var val_pire=potenciatx-losscable+parseFloat(ganancia);
+val_pire=val_pire.toFixed(3);
 calculos_result.pire=val_pire;
 document.getElementById("valpire").innerHTML=calculos_result.pire
 
@@ -108,6 +110,7 @@ function densidadmaxima(){
 	var val2=potenciatx*ganancia;
 	var val3=val2/val1;
 //var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+val3=val3.toFixed(3);
 calculos_result.densidad=val3;
 document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
@@ -135,6 +138,7 @@ function fsl_segundo(){
 	//alert(distancafinal);
 	var frecuencia_mhz=document.getElementById('frecuencia1').value;
 	var valor = 20*Math.log10(distanciafinal)+20*Math.log10(frecuencia_mhz)+32.45;
+	valor=valor.toFixed(3);
 	calculos_result.fsl1=valor;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
 //return valor;
@@ -161,7 +165,8 @@ function conversion_longitud(valor,unidad){
 }
 //punto 6
 function ganancia_antena_receptora(valmts,frecuencia,eficiencia_sat){
-	var valor_pie=3.28*valmts; //valor de metro a pie
+	//var valor_pie=3.28*valmts; //valor de metro a pie
+	
 	var gpx=20*Math.log(valor_pie)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49.92;//aun no se que carajo es 49,92?. Constante o Variable?
 
 return gpx;	 
