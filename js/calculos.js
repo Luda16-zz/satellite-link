@@ -164,12 +164,16 @@ function conversion_longitud(valor,unidad){
 	return result;
 }
 //punto 6
-function ganancia_antena_receptora(valmts,frecuencia,eficiencia_sat){
+function ganancia_antena_receptora(){
 	//var valor_pie=3.28*valmts; //valor de metro a pie
-	
-	var gpx=20*Math.log(valor_pie)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49.92;//aun no se que carajo es 49,92?. Constante o Variable?
-
-return gpx;	 
+	valmts=document.getElementById('distpies').value;
+	frecuencia=document.getElementById('frecuemhz').value;
+	eficiencia_sat=document.getElementById('eficisate').value;
+	var gpx=20*Math.log(valmts)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49.92;//aun no se que carajo es 49,92?. Constante o Variable?
+gpx=gpx.toFixed(3);
+	calculos_result.gan_anten_reci=gpx;
+	document.getElementById('gainpx').innerHTML=calculos_result.gan_anten_reci;
+//return gpx;	 
 }
 
 
