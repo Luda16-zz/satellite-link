@@ -33,12 +33,12 @@ Object.defineProperty(calculos_result,'pot_recept', {value: '0', writable:true, 
 Object.defineProperty(calculos_result,'figura', {value: '0', writable:true, enumerable:true, configurable:true});
 Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumerable:true, configurable:true});
 
-Object.defineProperty(calculos_result, 'temp', {value:'0',
+/*Object.defineProperty(calculos_result, 'temp', {value:'0',
   get: function() { return temp; },
   set: function(newValue) { bValue = newValue; },
   enumerable: true,
   configurable: true
-});
+});*/
 
 function fspl_decibels(){
 var pi=Math.PI;
@@ -166,11 +166,16 @@ function conversion_longitud(valor,unidad){
 //punto 6
 function ganancia_antena_receptora(){
 	//var valor_pie=3.28*valmts; //valor de metro a pie
+
 	valmts=document.getElementById('distpies').value;
 	frecuencia=document.getElementById('frecuemhz').value;
 	eficiencia_sat=document.getElementById('eficisate').value;
-	var gpx=20*Math.log(valmts)+20*Math.log(frecuencia)+10*Math.log(eficiencia_sat)- 49.92;//aun no se que carajo es 49,92?. Constante o Variable?
-gpx=gpx.toFixed(3);
+	eficiencia_sat=eficiencia_sat/100;
+	//alert(eficiencia_sat);
+	var gp1=20*Math.log10(valmts)+20*Math.log10(frecuencia)+10*Math.log10(eficiencia_sat)- 49.92;
+	var gpx=gp1;
+    
+    gpx=gpx.toFixed(3);
 	calculos_result.gan_anten_reci=gpx;
 	document.getElementById('gainpx').innerHTML=calculos_result.gan_anten_reci;
 //return gpx;	 
