@@ -33,13 +33,24 @@ Object.defineProperty(calculos_result,'pot_recept', {value: '0', writable:true, 
 Object.defineProperty(calculos_result,'figura', {value: '0', writable:true, enumerable:true, configurable:true});
 Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumerable:true, configurable:true});
 
-function fspl_decibels (distancia, frecuencia){
+Object.defineProperty(calculos_result, 'temp', {value:'0',
+  get: function() { return temp; },
+  set: function(newValue) { bValue = newValue; },
+  enumerable: true,
+  configurable: true
+});
+
+function fspl_decibels(){
 var pi=Math.PI;
 var velocidad_luz=300000000;
-
+var distancia = document.getElementById('dist').value;
+var frecuencia=document.getElementById('frecue').value;
 var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
 var valordb=10*Math.log10(valor);
-return valor;	
+calculos_result.fspldecibels=valordb;
+//localStorage["distancia"] =distancia; esto sirve para guardar 
+document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
+//return valor;	
 	
 }
 
@@ -88,9 +99,17 @@ document.getElementById("valpire").innerHTML=calculos_result.pire
  * http://www.pasternack.com/t-calculator-power-density.aspx
  *     */
 
-function densidadmaxima(potenciatx,ganancia,distancia){
+function densidadmaxima(){
 	var pi=Math.PI;
-var densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+	var potenciatx=document.getElementById('potantena').value;
+	var ganancia=document.getElementById('gain').value;
+	var distancia=document.getElementById('distancia').value;
+	var val1=4*pi*Math.pow(distancia,2);
+	var val2=potenciatx*ganancia;
+	var val3=val2/val1;
+//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+calculos_result.densidad=val3;
+document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
 }
 
@@ -106,9 +125,14 @@ var densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
 }*/
 
 //Funcion que esta en el punto 5
-function fsl1(distancia_kms,frecuencia_mhz){
-	valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
-return valor;
+function fsl_segundo(){
+	
+	var distancia_kms=document.getElementById('distancia1').value;
+	var frecuencia_mhz=document.getElementById('frecuencia1').value;
+	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
+	calculos_result.fsl1=valor;
+	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
+//return valor;
 	
 }
 
