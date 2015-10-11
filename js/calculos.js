@@ -86,10 +86,19 @@ function getPire(){
 var potenciatx=document.getElementById('potx').value;
 var ganancia=document.getElementById('gananc').value;
 var losscable=document.getElementById('lossc').value;
-var val_pire=potenciatx-losscable+parseFloat(ganancia);
+
+indice=document.form_pire.units.selectedIndex; 
+unidad=document.form_pire.units.options[indice].value;
+var potenciafinal=escala_watts(potenciatx,unidad);
+//alert(potenciafinal);
+potenciafinal1=potenciafinal*1;
+losscable1=losscable*1;
+ganancia1=ganancia*1;
+var val_pire=potenciafinal1-losscable1+ganancia1;
+//-losscable;
 val_pire=val_pire.toFixed(3);
 calculos_result.pire=val_pire;
-document.getElementById("valpire").innerHTML=calculos_result.pire
+document.getElementById("valpire").innerHTML=calculos_result.pire;
 
 
 //return pire;
@@ -248,14 +257,14 @@ return valortotal;
 
 
 function escala_watts(valor, unidad){
-	if(unidad=="watts"){
+	if(unidad=="Watts"){
 		var valortotal=valor*1;
 	}
-if(unidad=="milliwatts"){
+if(unidad=="Miliwatts"){
 	var valortotal=valor*1000;
 }	
 
-if(unidad=="dbm"){
+if(unidad=="dBm"){
 	var valortotal=10*Math.log10(1000*valor);
 }
 
