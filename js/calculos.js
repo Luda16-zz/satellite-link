@@ -102,6 +102,7 @@ function getPire(){
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
 	calculos_result.pire=val_pire;
+	localStorage["pire"]=calculos_result.pire;
 	document.getElementById("valpire").innerHTML=calculos_result.pire;
 
 
@@ -154,6 +155,7 @@ function fsl_segundo(){
 	var frecuencia_mhz=document.getElementById('frecuencia1').value;
 	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
 	valor=valor.toFixed(3);
+	localStorage["fsl"]=valor;
 	valorf=valor.toString().concat(' db');
 	calculos_result.fsl1=valorf;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
@@ -193,7 +195,10 @@ function ganancia_antena_receptora(){
 	var gpx=gp1;
 	 gpx=gpx.toFixed(3);
     gpxf=gpx.toString().concat(' dbi');
-	calculos_result.gan_anten_reci=gpxf;
+    calculos_result.gan_anten_reci=gpxf;
+    //localStorage["gain_recep"]=calculos_result.gan_anten_reci;
+	document.form_potrecept.ganancia_recept.value=gpx;
+	document.form_figura.gain2.value=gpx;
 	document.getElementById('gainpx').innerHTML=calculos_result.gan_anten_reci;
 //return gpx;	 
 }
@@ -201,28 +206,68 @@ function ganancia_antena_receptora(){
 
 
 //punto 7
-function potencia_recepcion(pire,fsl,gpx){
-	var psl=pire+(-fsl)+gpx;
-	return psl;
+function potencia_recepcion(){
+	//var psl=pire+(-fsl)+gpx;
+	
+	fsl=document.getElementById('perdida').value;
+	gpx=document.getElementById('ganancia_recept').value;
+	pire=document.getElementById('pire').value;
+	pire1=pire*1;
+	fsl1=fsl*1;
+	gpx1=gpx*1;
+	var psl=pire1+(-fsl1)+gpx1;
+	psl1=psl.toFixed(3);
+	calculos_result.pot_recept=psl1;
+	pslstr=psl1.toString().concat(' db');
+	document.getElementById('gainrecept').innerHTML=pslstr;
+	//return psl;
 }
-
+function pasar(){
+    window.location="up-two.html";
+	//document.form_potrecept.pire.value=localStorage["pire"];
+	//document.form_potrecept.perdida.value=localStorage["fsl"];
+	//document.getElementById('pire').value=localStorage["pire"];
+	//document.getElementById('perdida').value=localStorage["fsl"];
+	//document.getElementById('ganancia_recept').value=localStorage["gain_recep"];
+}
+function carga(){
+	document.form_potrecept.pire.value=localStorage["pire"];
+	document.form_potrecept.perdida.value=localStorage["fsl"];
+	document.form_cnr.pirecnr.value=localStorage["pire"];
+	document.form_cnr.perdidacnr.value=localStorage["fsl"];
+}
 //punto 8 
 //calculamos figura merito
-function calculo_figura(gpx,temp_kelvin){
+function calculo_figura(){
 	//temp = system noise temperature	
-	var calc_figura=gpx-10*Math.log10(temp);
-	return calc_figura;
+	gprec=document.getElementById('gain2').value;
+	temperatura=document.getElementById('temp').value;
+	var calc_figura=gprec-10*Math.log10(temperatura);
+	calc_figura1=calc_figura.toFixed(3);
+	figurastr=calc_figura1.toString().concat(' db/k');
+	document.form_cnr.figuracnr.value=calc_figura1;
+	document.getElementById('figuramerito').innerHTML=figurastr;
+	//return calc_figura;
 }
 
 //punto 9
 //C/NO
 
-function last(pire,fsl,calc_figura){
+function last(){
 	var k=Math.pow(10,-23);
+	pirecnr=document.getElementById('pirecnr').value;
+	fslcnr=document.getElementById('perdidacnr').value;
+	figuracnr=document.getElementById('figuracnr').value;
 var boltzman=1.3806*k;
- var fin=pire-fsl+calc_figura-boltzman;
- 
- return fin;
+pirecnr1=pirecnr*1;
+fslcnr1=fslcnr*1;
+figuracnr1=figuracnr*1;
+boltzman1=boltzman*1;
+
+ var cnr=pirecnr1-fslcnr1+figuracnr1-boltzman1;
+ cnrfin=cnr.toFixed(3);
+ cnrstr=cnrfin.toString().concat(' db/Hz');
+ document.getElementById('valcnr').innerHTML=cnrstr;
 	
 }
 

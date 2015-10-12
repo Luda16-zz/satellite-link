@@ -13,12 +13,12 @@
     <link type="text/css" rel="stylesheet" href="../css/custom.css" />
 </head>
 
-<body>
+<body onload="carga()"> 
    <nav class="blue darken-4">
       
       <ul id="slide-out" class="side-nav">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="#!">Recursos</a></li>
+        <li><a href="tab-menu.html">Recursos</a></li>
         <li><a href="up-pire.html">Calculadora Satelital</a></li>
         <li><a href="#!">Extra</a></li>
 
@@ -74,6 +74,142 @@
                 </div>
             </div>
         </section>
+         <section id="contacto" class="contacto">
+            <div class="container">
+                <h4>Potencia de Recepci&oacute;n</h4>
+                <hr>
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="row">
+                            <form class="col s12" name="form_potrecept">
+                                <div class="row">                                                                       
+                                        <!-- Dropdown Trigger -->                                        
+                                          <!-- <select name="unidades" class='btn' id="units" name="units">
+                                        	<option value="Kms">Kilometros </option>
+                                        	<option value="Meters">Metros</option>
+                                        	<option value="Miles">Millas</option>
+                                        	<option value="Feet">Pies</option>
+                                        </select>  -->
+                                        <!-- Dropdown Structure -->
+                                        
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="pire" value="" name="pire">
+                                        <label for="">PIRE</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="perdida" value="" name="perdida">
+                                        <label for="">Perdida en el espacio libre (FSL)</label>
+                                    </div>
+                                </div>
+								
+								<div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="ganancia_recept" value="" name="ganancia_recept">
+                                        <label for="">Ganancia Antena Receptora</label>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="potencia_recepcion()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </form>
+                        </div><div id="gainrecept"></div>
+                   </div>                    
+                </div>
+            </div>
+        </section>
+        
+<section id="contacto" class="contacto">
+            <div class="container">
+                <h4>Figura Merito</h4>
+                <hr>
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="row">
+                            <form class="col s12" name="form_figura">
+                                <div class="row">                                                                       
+                                        <!-- Dropdown Trigger -->                                        
+                                          <!-- <select name="unidades" class='btn' id="units" name="units">
+                                        	<option value="Kms">Kilometros </option>
+                                        	<option value="Meters">Metros</option>
+                                        	<option value="Miles">Millas</option>
+                                        	<option value="Feet">Pies</option>
+                                        </select>  -->
+                                        <!-- Dropdown Structure -->
+                                        
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="gain2" value="" name="gain2">
+                                        <label for="">Ganancia Antena Receptora</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="temp" value="" name="temp">
+                                        <label for="">Temperatura</label>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="calculo_figura()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </form>
+                        </div><div id="figuramerito"></div>
+                   </div>                    
+                </div>
+            </div>
+        </section>  
+        
+      <section id="contacto" class="contacto">
+            <div class="container">
+                <h4>CNR</h4>
+                <hr>
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="row">
+                            <form class="col s12" name="form_cnr">
+                                <div class="row">                                                                       
+                                        <!-- Dropdown Trigger -->                                        
+                                          <!-- <select name="unidades" class='btn' id="units" name="units">
+                                        	<option value="Kms">Kilometros </option>
+                                        	<option value="Meters">Metros</option>
+                                        	<option value="Miles">Millas</option>
+                                        	<option value="Feet">Pies</option>
+                                        </select>  -->
+                                        <!-- Dropdown Structure -->
+                                        
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="pirecnr" value="" name="pirecnr">
+                                        <label for="">PIRE</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="perdidacnr" value="" name="perdidacnr">
+                                        <label for="">Perdida en el espacio libre (FSL)</label>
+                                    </div>
+                                </div>
+								
+								<div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="figuracnr" value="" name="figuracnr">
+                                        <label for="">Figura Merito</label>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="last()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </form>
+                        </div><div id="valcnr"></div>
+                   </div>                    
+                </div>
+            </div>
+        </section>
+              
     </main>
     <footer class="page-footer blue darken-4">
         <div class="footer-copyright">
