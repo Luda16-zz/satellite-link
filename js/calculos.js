@@ -50,7 +50,9 @@ function fspl_decibels(){
 	var valor=eficiencia_sat*Math.pow((pi*distancia*frecuencia/velocidad_luz),2);
 	var valordb=10*Math.log10(valor);
 	valordb=valordb.toFixed(3);
-	calculos_result.fspldecibels=valordb;
+	
+	valordbf=valordb.toString().concat(' db');
+	calculos_result.fspldecibels=valordbf;
 	//localStorage["distancia"] =distancia; esto sirve para guardar 
 	document.getElementById("gainpx1").innerHTML=calculos_result.fspldecibels;
 	//return valor;	
@@ -123,7 +125,8 @@ function densidadmaxima(){
 	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
 	//val3=val3.toFixed(3);
 	//alert(val3);
-	calculos_result.densidad=val3;
+	valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
+	calculos_result.densidad=valor3f;
 	document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
 }
@@ -151,7 +154,8 @@ function fsl_segundo(){
 	var frecuencia_mhz=document.getElementById('frecuencia1').value;
 	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
 	valor=valor.toFixed(3);
-	calculos_result.fsl1=valor;
+	valorf=valor.toString().concat(' db');
+	calculos_result.fsl1=valorf;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
 //return valor;
 	
