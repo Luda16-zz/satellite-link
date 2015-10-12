@@ -202,7 +202,7 @@ function potencia_recepcion(pire,fsl,gpx){
 //calculamos figura merito
 function calculo_figura(gpx,temp_kelvin){
 	//temp = system noise temperature	
-	var calc_figura=gpx-10*Math.log(temp);
+	var calc_figura=gpx-10*Math.log10(temp);
 	return calc_figura;
 }
 
@@ -260,9 +260,11 @@ function escala_watts(valor, unidad){
 	if(unidad=="Watts"){
 		var valortotal=valor*1;
 	}
-	if(unidad=="Miliwatts"){
+
+	if(unidad=="Milliwatts"){
 		var valortotal=valor*1000;
 	}	
+
 
 	if(unidad=="dBm"){
 		var valortotal=10*Math.log10(1000*valor);
