@@ -121,7 +121,8 @@ function densidadmaxima(){
 	var val2=potenciatx*ganancia;
 	var val3=val2/val1;
 	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
-	val3=val3.toFixed(3);
+	//val3=val3.toFixed(3);
+	//alert(val3);
 	calculos_result.densidad=val3;
 	document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
@@ -143,12 +144,12 @@ function fsl_segundo(){
 	
 	var distancia_kms=document.getElementById('distancia1').value;
 		//alert(document.getElementById('units').options[document.getElementById('units').selectedIndex].text);
-	indice=document.formulario.units.selectedIndex; 
-	unidad=document.formulario.units.options[indice].value;
-	var distanciafinal=conversion_longitud(distancia_kms,unidad);
+	//indice=document.formulario.units.selectedIndex; 
+	//unidad=document.formulario.units.options[indice].value;
+	//var distanciafinal=conversion_longitud(distancia_kms,unidad);
 	//alert(distancafinal);
 	var frecuencia_mhz=document.getElementById('frecuencia1').value;
-	var valor = 20*Math.log10(distanciafinal)+20*Math.log10(frecuencia_mhz)+32.45;
+	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
 	valor=valor.toFixed(3);
 	calculos_result.fsl1=valor;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
