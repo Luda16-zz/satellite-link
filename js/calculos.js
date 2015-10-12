@@ -43,14 +43,16 @@ Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumer
 function fspl_decibels(){
 	var pi=Math.PI;
 	var velocidad_luz=300000000;
-	var distancia = document.getElementById('dist').value;
-	var frecuencia=document.getElementById('frecue').value;
-	var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
+	var distancia = document.getElementById('distmts').value;
+	var frecuencia=document.getElementById('frecuehz').value;
+	var eficiencia_sat=document.getElementById('eficisate1').value;
+	eficiencia_sat=eficiencia_sat/100;
+	var valor=eficiencia_sat*Math.pow((pi*distancia*frecuencia/velocidad_luz),2);
 	var valordb=10*Math.log10(valor);
 	valordb=valordb.toFixed(3);
 	calculos_result.fspldecibels=valordb;
 	//localStorage["distancia"] =distancia; esto sirve para guardar 
-	document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
+	document.getElementById("gainpx1").innerHTML=calculos_result.fspldecibels;
 	//return valor;	
 	
 }
