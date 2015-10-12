@@ -28,10 +28,21 @@ html {
 
 }
 
+.recursos-brand {
+    text-align: center;
+    padding: 2em;
+    background-image: url("../img/fondo2.jpg");
+    background-repeat: no-repeat;    
+    background-position: 30% 60%; 
+    max-width: 100%;
+    height: 300px;
+
+}
+
 
 .home-brand .logo {
     margin-left: 20px;
-    height: 100px;
+    height: 150px;
 }
 
 h1 {
@@ -92,8 +103,6 @@ section hr {
 }
 
 
-
-
 .habilidades i {
     color: #ee6e73;
     font-size: 7rem;
@@ -146,4 +155,26 @@ input:focus, input[type=text]:focus{
 
 .unidad-medida{
     position: absolute;
+}
+
+
+/************************************************************************************************
+                                  Video (Youtube)
+*************************************************************************************************/
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
