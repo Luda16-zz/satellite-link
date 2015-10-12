@@ -2,6 +2,16 @@
  * Funny Frontend (http://funnyfrontend.com)
  * Copyright 2014-2015
  */
+@font-face {
+    font-family: Makhina;
+    src: url(../font/Makhina/makhina.ttf);
+}
+
+@font-face {
+    font-family: Moderne;
+    src: url(../font/Moderne/moderne.ttf);
+}
+
 
 html {
     font-size: 16px
@@ -10,18 +20,28 @@ html {
 .home-brand {
     text-align: center;
     padding: 2em;
-    background-image: url("../img/background.png");
+    background-image: url("../img/fondo4.jpg");
+    background-repeat: no-repeat;    
+    background-position: 40% 60%; 
+    max-width: 100%;
+    height: auto;
+
 }
 
 
 .home-brand .logo {
     margin-left: 20px;
-    height: 300px;
+    height: 100px;
 }
 
 h1 {
     font-size: 1.5rem;
-    line-height: 25px
+    line-height: 25px;
+    font-family: Moderne;
+}
+
+h4{
+    font-family: Makhina;
 }
 
 .home-brand .btn-floating {
@@ -62,7 +82,7 @@ section .col {
 section h4 {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 15px;    
 }
 
 section hr {
