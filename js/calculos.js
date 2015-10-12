@@ -41,17 +41,17 @@ Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumer
 });*/
 
 function fspl_decibels(){
-var pi=Math.PI;
-var velocidad_luz=300000000;
-var distancia = document.getElementById('dist').value;
-var frecuencia=document.getElementById('frecue').value;
-var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
-var valordb=10*Math.log10(valor);
-valordb=valordb.toFixed(3);
-calculos_result.fspldecibels=valordb;
-//localStorage["distancia"] =distancia; esto sirve para guardar 
-document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
-//return valor;	
+	var pi=Math.PI;
+	var velocidad_luz=300000000;
+	var distancia = document.getElementById('dist').value;
+	var frecuencia=document.getElementById('frecue').value;
+	var valor=Math.pow((4*pi*distancia*frecuencia/velocidad_luz),2);
+	var valordb=10*Math.log10(valor);
+	valordb=valordb.toFixed(3);
+	calculos_result.fspldecibels=valordb;
+	//localStorage["distancia"] =distancia; esto sirve para guardar 
+	document.getElementById("valfspldb").innerHTML=calculos_result.fspldecibels;
+	//return valor;	
 	
 }
 
@@ -83,22 +83,22 @@ return potenciatotal;
 //Calculadora EIRP
 /* http://www.pasternack.com/t-calculator-eirp.aspx */
 function getPire(){
-var potenciatx=document.getElementById('potx').value;
-var ganancia=document.getElementById('gananc').value;
-var losscable=document.getElementById('lossc').value;
+	var potenciatx=document.getElementById('potx').value;
+	var ganancia=document.getElementById('gananc').value;
+	var losscable=document.getElementById('lossc').value;
 
-indice=document.form_pire.units.selectedIndex; 
-unidad=document.form_pire.units.options[indice].value;
-var potenciafinal=escala_watts(potenciatx,unidad);
-//alert(potenciafinal);
-potenciafinal1=potenciafinal*1;
-losscable1=losscable*1;
-ganancia1=ganancia*1;
-var val_pire=potenciafinal1-losscable1+ganancia1;
-//-losscable;
-val_pire=val_pire.toFixed(3);
-calculos_result.pire=val_pire;
-document.getElementById("valpire").innerHTML=calculos_result.pire;
+	indice=document.form_pire.units.selectedIndex; 
+	unidad=document.form_pire.units.options[indice].value;
+	var potenciafinal=escala_watts(potenciatx,unidad);
+	//alert(potenciafinal);
+	potenciafinal1=potenciafinal*1;
+	losscable1=losscable*1;
+	ganancia1=ganancia*1;
+	var val_pire=potenciafinal1-losscable1+ganancia1;
+	//-losscable;
+	val_pire=val_pire.toFixed(3);
+	calculos_result.pire=val_pire;
+	document.getElementById("valpire").innerHTML=calculos_result.pire;
 
 
 //return pire;
@@ -118,10 +118,10 @@ function densidadmaxima(){
 	var val1=4*pi*Math.pow(distancia,2);
 	var val2=potenciatx*ganancia;
 	var val3=val2/val1;
-//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
-val3=val3.toFixed(3);
-calculos_result.densidad=val3;
-document.getElementById('valdensity').innerHTML=calculos_result.densidad;
+	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+	val3=val3.toFixed(3);
+	calculos_result.densidad=val3;
+	document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
 }
 
@@ -228,12 +228,12 @@ function escala_hertz(valor,unidad){
 
 	if (unidad=="kilohertz"){
 
-    var valortotal=valor*1000;
+    	var valortotal=valor*1000;
 		}
 
 	if (unidad=="megahertz"){
 
-    var valortotal=valor*1000000;
+    	var valortotal=valor*1000000;
 		}
 		
 if (unidad=="gigahertz"){
@@ -244,13 +244,13 @@ if (unidad=="gigahertz"){
 
 	if (unidad=="terahertz"){
 
-    var valortotal=valor*1000000000000;
+    	var valortotal=valor*1000000000000;
 		}
 
 		if (unidad=="petahertz"){
 
     var valortotal=valor*1000000000000000;
-		}
+			}
 
 return valortotal;
 }
@@ -260,17 +260,20 @@ function escala_watts(valor, unidad){
 	if(unidad=="Watts"){
 		var valortotal=valor*1;
 	}
-if(unidad=="Milliwatts"){
-	var valortotal=valor*1000;
-}	
 
-if(unidad=="dBm"){
-	var valortotal=10*Math.log10(1000*valor);
-}
+	if(unidad=="Miliwatts"){
+		var valortotal=valor*1000;
+	}	
 
-if(unidad=="dbw"){
-	var valortotal=10*Math.log10(valor);
-}
+
+	if(unidad=="dBm"){
+		var valortotal=10*Math.log10(1000*valor);
+	}
+
+	if(unidad=="dbw"){
+		var valortotal=10*Math.log10(valor);
+	}
+
 	return valortotal;
 }
 
