@@ -185,14 +185,15 @@ function ganancia_antena_receptora(){
 
 	valmts=document.getElementById('distpies').value;
 	frecuencia=document.getElementById('frecuemhz').value;
-	eficiencia_sat=document.getElementById('eficisate').value;
+	eficiencia_sat=document.getElementById('eficisate2').value;
 	eficiencia_sat=eficiencia_sat/100;
 	//alert(eficiencia_sat);
 	var gp1=20*Math.log10(valmts)+20*Math.log10(frecuencia)+10*Math.log10(eficiencia_sat)- 49.92;
+	
 	var gpx=gp1;
-    
-    gpx=gpx.toFixed(3);
-	calculos_result.gan_anten_reci=gpx;
+	 gpx=gpx.toFixed(3);
+    gpxf=gpx.toString().concat(' dbi');
+	calculos_result.gan_anten_reci=gpxf;
 	document.getElementById('gainpx').innerHTML=calculos_result.gan_anten_reci;
 //return gpx;	 
 }
