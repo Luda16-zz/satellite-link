@@ -4,15 +4,16 @@ This project is built with MaterializeCSS library and Intel XDK framework which 
 
 **Procesos UP**
 
-1. Ganancia Antena
+1. Ganancia Antena de Transmision
 2. Potencia de Transmision (Tx)
 3. PIRE
 4. Densidad Maxima
-5. Potencia Recepcion
+5. Perdida en el Espacio LIbre
 6. Ganancia Antena Receptora
 7. Potencia de Recepcion
 8. Figura Merito
-9. Otros
+9. CNR
 
+**Procesos Down**
 
 ![Enlaces satelitales](https://github.com/Luda16/satellite-link/blob/master/img/SatteliteLink.jpg)
