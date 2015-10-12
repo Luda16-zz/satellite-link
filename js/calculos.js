@@ -261,7 +261,7 @@ function escala_watts(valor, unidad){
 		var valortotal=valor*1;
 	}
 
-	if(unidad=="Miliwatts"){
+	if(unidad=="Milliwatts"){
 		var valortotal=valor*1000;
 	}	
 
