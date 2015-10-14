@@ -4,6 +4,9 @@
     "initialAutoPluginCount": 0,
     "currentBuildConfiguration": "Android",
     "projectFiles": {},
-    "projectDirectories": {}
+    "projectDirectories": {},
+    "currentService": {
+      "service": "db_core"
+    }
   }
 }
