@@ -53,7 +53,7 @@ function fspl_decibels(){
 	
 	valordbf=valordb.toString().concat(' db');
 	calculos_result.fspldecibels=valordbf;
-	//localStorage["distancia"] =distancia; esto sirve para guardar 
+	localStorage["gtx"] =valordb;// esto sirve para guardar 
 	document.getElementById("gainpx1").innerHTML=calculos_result.fspldecibels;
 	//return valor;	
 	
@@ -126,6 +126,7 @@ function densidadmaxima(){
 	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
 	//val3=val3.toFixed(3);
 	//alert(val3);
+	localStorage["density"]=val3;
 	valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
 	calculos_result.densidad=valor3f;
 	document.getElementById('valdensity').innerHTML=calculos_result.densidad;
@@ -194,6 +195,7 @@ function ganancia_antena_receptora(){
 	
 	var gpx=gp1;
 	 gpx=gpx.toFixed(3);
+	 localStorage["grx"]=gpx;
     gpxf=gpx.toString().concat(' dbi');
     calculos_result.gan_anten_reci=gpxf;
     //localStorage["gain_recep"]=calculos_result.gan_anten_reci;
@@ -218,6 +220,7 @@ function potencia_recepcion(){
 	var psl=pire1+(-fsl1)+gpx1;
 	psl1=psl.toFixed(3);
 	calculos_result.pot_recept=psl1;
+	localStorage["rsl"]=psl1;
 	pslstr=psl1.toString().concat(' db');
 	document.getElementById('gainrecept').innerHTML=pslstr;
 	//return psl;
@@ -236,6 +239,20 @@ function carga(){
 	document.form_cnr.pirecnr.value=localStorage["pire"];
 	document.form_cnr.perdidacnr.value=localStorage["fsl"];
 }
+
+//Aqui cargamos los datos en la tabla1
+function carga_resultados_up(){
+	document.getElementById('gtxresult').innerHTML=localStorage["gtx"];
+	document.getElementById('pireresult').innerHTML=localStorage["pire"];
+	document.getElementById('densidadresult').innerHTML=localStorage["density"];
+document.getElementById('fslresult').innerHTML=localStorage["fsl"];
+document.getElementById('grxresult').innerHTML= localStorage["grx"];
+document.getElementById('rslresult').innerHTML= localStorage["rsl"];
+document.getElementById('gtresult').innerHTML= localStorage["gt"];
+document.getElementById('cnresult').innerHTML= localStorage["cn"];
+
+	
+}
 //punto 8 
 //calculamos figura merito
 function calculo_figura(){
@@ -245,6 +262,7 @@ function calculo_figura(){
 	var calc_figura=gprec-10*Math.log10(temperatura);
 	calc_figura1=calc_figura.toFixed(3);
 	figurastr=calc_figura1.toString().concat(' db/k');
+	localStorage["gt"]=calc_figura1;
 	document.form_cnr.figuracnr.value=calc_figura1;
 	document.getElementById('figuramerito').innerHTML=figurastr;
 	//return calc_figura;
@@ -266,6 +284,7 @@ boltzman1=boltzman*1;
 
  var cnr=pirecnr1-fslcnr1+figuracnr1-boltzman1;
  cnrfin=cnr.toFixed(3);
+ localStorage["cn"]=cnrfin;
  cnrstr=cnrfin.toString().concat(' db/Hz');
  document.getElementById('valcnr').innerHTML=cnrstr;
 	
