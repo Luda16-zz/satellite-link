@@ -123,12 +123,13 @@ function densidadmaxima(){
 	var val1=4*pi*Math.pow(distancia,2);
 	var val2=potenciatx*ganancia;
 	var val3=val2/val1;
+	var valfin=10*Math.log10(val3);
 	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
-	//val3=val3.toFixed(3);
+	val4=valfin.toFixed(3);
 	//alert(val3);
-	localStorage["density"]=val3;
-	valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
-	calculos_result.densidad=valor3f;
+	localStorage["density"]=val4;
+	//valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
+	calculos_result.densidad=val4;
 	document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 
 }
