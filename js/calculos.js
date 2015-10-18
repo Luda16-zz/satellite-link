@@ -50,6 +50,8 @@ function fspl_decibels(){
 	var valor=eficiencia_sat*Math.pow((pi*distancia*frecuencia/velocidad_luz),2);
 	var valordb=10*Math.log10(valor);
 	valordb=valordb.toFixed(3);
+	document.densidad.gain.value=valordb; //Colocamos el valor de ganancia en el input de densidad
+	document.form_pire.gananc.value=valordb;//Colocamos el valor de ganancia en el input de PIRE
 	
 	valordbf=valordb.toString().concat(' db');
 	calculos_result.fspldecibels=valordbf;
@@ -89,16 +91,17 @@ return potenciatotal;
 function getPire(){
 	var potenciatx=document.getElementById('potx').value;
 	var ganancia=document.getElementById('gananc').value;
-	var losscable=document.getElementById('lossc').value;
+	//var losscable=document.getElementById('lossc').value;
 
 	indice=document.form_pire.units.selectedIndex; 
 	unidad=document.form_pire.units.options[indice].value;
 	var potenciafinal=escala_watts(potenciatx,unidad);
 	//alert(potenciafinal);
 	potenciafinal1=potenciafinal*1;
-	losscable1=losscable*1;
+	document.densidad.potantena.value=potenciafinal1;
+	//losscable1=losscable*1;
 	ganancia1=ganancia*1;
-	var val_pire=potenciafinal1-losscable1+ganancia1;
+	var val_pire=potenciafinal1+ganancia1;
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
 	calculos_result.pire=val_pire;
@@ -334,7 +337,7 @@ function escala_watts(valor, unidad){
 		var valortotal=valor*1;
 	}
 
-	if(unidad=="Milliwatts"){
+	if(unidad=="Miliwatts"){
 		var valortotal=valor*1000;
 	}	
 
@@ -350,5 +353,61 @@ function escala_watts(valor, unidad){
 	return valortotal;
 }
 
+function gananciaAntenaBajando(){
+	var pi=Math.PI;
+	var valorsatelital=document.getElementById('satelitedown').value;
+	var satelitedown=valorsatelital/100;
+	var anguloreceptor=document.getElementById('anguloantena').value;
+	var gain=Math.pow(70*pi/anguloreceptor,2);
+	gainres=gain*satelitedown;
+	gainfinal1=10*Math.log10(gainres);
+	gainfinal=gainfinal1.toFixed(3);
+	document.formpiredown.ganancdown.value=gainfinal;
+	document.densidaddown.gaindown.value=gainfinal;
+	gainfinalstr=gainfinal.toString().concat(' dbi');
+	document.getElementById('antenareceptora').innerHTML=gainfinalstr;
+	
+}
 
+function getPireDown(){
+	var potenciatx=document.getElementById('potxdown').value;
+	var ganancia=document.getElementById('ganancdown').value;
+
+	indice=document.formpiredown.units.selectedIndex; 
+	unidad=document.formpiredown.units.options[indice].value;
+	var potenciafinal=escala_watts(potenciatx,unidad);
+    //alert(potenciafinal);
+   document.densidaddown.potantenadown.value=potenciafinal.toFixed(3);
+	potenciafinal1=potenciafinal*1;
+	//losscable1=losscable*1;
+	ganancia1=ganancia*1;
+	var val_pire=potenciafinal1+ganancia1;
+	//-losscable;
+	val_pire=val_pire.toFixed(3);
+	localStorage["piredown"]=val_pire;
+	document.getElementById("valpiredown").innerHTML=val_pire;
+
+
+//return pire;
+
+}
+
+function densidadMaximaDown(){
+	var pi=Math.PI;
+	var potenciatx=document.getElementById('potantenadown').value;
+	var ganancia=document.getElementById('gaindown').value;
+	var distancia=document.getElementById('distanciadown').value;
+	var val1=4*pi*Math.pow(distancia,2);
+	var val2=potenciatx*ganancia;
+	var val3=val2/val1;
+	var valfin=10*Math.log10(val3);
+	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
+	val4=valfin.toFixed(3);
+	//alert(val3);
+	localStorage["densitydown"]=val4;
+	//valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
+	//calculos_result.densidad=val4;
+	document.getElementById('valdensitydown').innerHTML=val4;
+
+}
 
