@@ -265,6 +265,21 @@ document.getElementById('cnresult').innerHTML= localStorage["cn"];
 
 	
 }
+
+function cargaResultadosDown(){
+	document.getElementById('gtxresultdown').innerHTML=localStorage["gtxdown"];
+	document.getElementById('pireresultdown').innerHTML=localStorage["piredown"];
+	document.getElementById('densidadresultdown').innerHTML=localStorage["densitydown"];
+document.getElementById('fslresultdown').innerHTML=localStorage["fsldown"];
+document.getElementById('grxresultdown').innerHTML= localStorage["grxdown"];
+document.getElementById('rslresultdown').innerHTML= localStorage["rsldown"];
+document.getElementById('gtresultdown').innerHTML= localStorage["gtdown"];
+document.getElementById('cnresultdown').innerHTML= localStorage["cndown"];
+
+	
+}
+
+
 //punto 8 
 //calculamos figura merito
 function calculo_figura(){
@@ -373,6 +388,7 @@ function gananciaAntenaBajando(){
 	document.formpiredown.ganancdown.value=gainfinal;
 	document.densidaddown.gaindown.value=gainfinal;
 	gainfinalstr=gainfinal.toString().concat(' dbi');
+	localStorage["gtxdown"] =gainfinal;// esto sirve para guardar 
 	document.getElementById('antenareceptora').innerHTML=gainfinalstr;
 	
 }
