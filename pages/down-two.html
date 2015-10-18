@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body onload="carga()"> 
+<body onload="cargadown()"> 
    <nav class="blue darken-4">
       
       <ul id="slide-out" class="side-nav">
@@ -47,14 +47,14 @@
                                         <!-- Dropdown Structure -->
                                         
                                     <div class="col s6">
-                                        <input  type="text" class="validate" id="distpies" value="">
+                                        <input  type="text" class="validate" id="distpiesdown" value="">
                                         <label for="">Distancia en Pies</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="frecuemhz" value="">
+                                        <input  type="text" class="validate" id="frecuemhzdown" value="">
                                         <label for="">Frecuencua en MegaHertz</label>
                                     </div>
                                 </div>
@@ -62,15 +62,15 @@
 								<div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="eficisate2" value="">
+                                        <input  type="text" class="validate" id="eficisate2down" value="">
                                         <label for="">Eficiencia Satelite %</label>
                                     </div>
                                 </div>
-                                <button class="btn waves-effect waves-light" type="button" onclick="ganancia_antena_receptora()" name="actionpire" id="actionpire">Calcular
+                                <button class="btn waves-effect waves-light" type="button" onclick="gananciaAntenaReceptoraDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
                             </form>
-                        </div><div id="gainpx"></div>
+                        </div><div id="gainpxdown"></div>
                    </div>                    
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col s12 m7">
                         <div class="row">
-                            <form class="col s12" name="form_potrecept">
+                            <form class="col s12" name="formpotreceptdown">
                                 <div class="row">                                                                       
                                         <!-- Dropdown Trigger -->                                        
                                           <!-- <select name="unidades" class='btn' id="units" name="units">
@@ -94,14 +94,14 @@
                                         <!-- Dropdown Structure -->
                                         
                                     <div class="col s6">
-                                        <input  type="text" class="validate" id="pire" value="" name="pire">
+                                        <input  type="text" class="validate" id="piredown" value="" name="piredown">
                                         <label for="">PIRE</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="perdida" value="" name="perdida">
+                                        <input  type="text" class="validate" id="perdidadown" value="" name="perdidadown">
                                         <label for="">Perdida en el espacio libre (FSL)</label>
                                     </div>
                                 </div>
@@ -109,15 +109,15 @@
 								<div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="ganancia_recept" value="" name="ganancia_recept">
+                                        <input  type="text" class="validate" id="gananciareceptdown" value="" name="gananciareceptdown">
                                         <label for="">Ganancia Antena Receptora</label>
                                     </div>
                                 </div>
-                                <button class="btn waves-effect waves-light" type="button" onclick="potencia_recepcion()" name="actionpire" id="actionpire">Calcular
+                                <button class="btn waves-effect waves-light" type="button" onclick="potenciaRecepcionDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
                             </form>
-                        </div><div id="gainrecept"></div>
+                        </div><div id="gainreceptdown"></div>
                    </div>                    
                 </div>
             </div>
@@ -130,7 +130,7 @@
                 <div class="row">
                     <div class="col s12 m7">
                         <div class="row">
-                            <form class="col s12" name="form_figura">
+                            <form class="col s12" name="formfiguradown">
                                 <div class="row">                                                                       
                                         <!-- Dropdown Trigger -->                                        
                                           <!-- <select name="unidades" class='btn' id="units" name="units">
@@ -142,22 +142,22 @@
                                         <!-- Dropdown Structure -->
                                         
                                     <div class="col s6">
-                                        <input  type="text" class="validate" id="gain2" value="" name="gain2">
+                                        <input  type="text" class="validate" id="gain2down" value="" name="gain2down">
                                         <label for="">Ganancia Antena Receptora</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="temp" value="" name="temp">
+                                        <input  type="text" class="validate" id="tempdown" value="" name="tempdown">
                                         <label for="">Temperatura (Kelvin)</label>
                                     </div>
                                 </div>
-                                <button class="btn waves-effect waves-light" type="button" onclick="calculo_figura()" name="actionpire" id="actionpire">Calcular
+                                <button class="btn waves-effect waves-light" type="button" onclick="calculoFiguraDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
                             </form>
-                        </div><div id="figuramerito"></div>
+                        </div><div id="figurameritodown"></div>
                    </div>                    
                 </div>
             </div>
@@ -170,7 +170,7 @@
                 <div class="row">
                     <div class="col s12 m7">
                         <div class="row">
-                            <form class="col s12" name="form_cnr">
+                            <form class="col s12" name="formcnrdown">
                                 <div class="row">                                                                       
                                         <!-- Dropdown Trigger -->                                        
                                           <!-- <select name="unidades" class='btn' id="units" name="units">
@@ -182,14 +182,14 @@
                                         <!-- Dropdown Structure -->
                                         
                                     <div class="col s6">
-                                        <input  type="text" class="validate" id="pirecnr" value="" name="pirecnr">
+                                        <input  type="text" class="validate" id="pirecnrdown" value="" name="pirecnrdown">
                                         <label for="">PIRE</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="perdidacnr" value="" name="perdidacnr">
+                                        <input  type="text" class="validate" id="perdidacnrdown" value="" name="perdidacnrdown">
                                         <label for="">Perdida en el espacio libre (FSL)</label>
                                     </div>
                                 </div>
@@ -197,22 +197,22 @@
 								<div class="row">
                                     <div class="col s6">
                                         
-                                        <input  type="text" class="validate" id="figuracnr" value="" name="figuracnr">
+                                        <input  type="text" class="validate" id="figuracnrdown" value="" name="figuracnrdown">
                                         <label for="">Figura Merito</label>
                                     </div>
                                 </div>
-                                <button class="btn waves-effect waves-light" type="button" onclick="last()" name="actionpire" id="actionpire">Calcular
+                                <button class="btn waves-effect waves-light" type="button" onclick="lastDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
                             </form>
-                        </div><div id="valcnr"></div>
+                        </div><div id="valcnrdown"></div>
                    </div>                    
                 </div>
             </div>
         </section>
         
       <h1 align="left"  class="text">Mostrar calculos de UP
-                        <a href="results-up.html" class="btn-floating btn-large waves-effect waves-light red">
+                        <a href="results-down.html" class="btn-floating btn-large waves-effect waves-light red">
                             <i class="material-icons">send</i>
                         </a>
                     </h1>

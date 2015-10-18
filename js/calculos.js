@@ -244,6 +244,14 @@ function carga(){
 	document.form_cnr.perdidacnr.value=localStorage["fsl"];
 }
 
+function cargadown(){
+	document.formpotreceptdown.piredown.value=localStorage["piredown"];
+	document.formpotreceptdown.perdidadown.value=localStorage["fsldown"];
+	document.formcnrdown.pirecnrdown.value=localStorage["piredown"];
+	document.formcnrdown.perdidacnrdown.value=localStorage["fsldown"];
+}
+
+
 //Aqui cargamos los datos en la tabla1
 function carga_resultados_up(){
 	document.getElementById('gtxresult').innerHTML=localStorage["gtx"];
@@ -409,5 +417,94 @@ function densidadMaximaDown(){
 	//calculos_result.densidad=val4;
 	document.getElementById('valdensitydown').innerHTML=val4;
 
+}
+
+function fslDown(){
+	
+	var distancia_kms=document.getElementById('distancia1down').value;
+		//alert(document.getElementById('units').options[document.getElementById('units').selectedIndex].text);
+	//indice=document.formulario.units.selectedIndex; 
+	//unidad=document.formulario.units.options[indice].value;
+	//var distanciafinal=conversion_longitud(distancia_kms,unidad);
+	//alert(distancafinal);
+	var frecuencia_mhz=document.getElementById('frecuencia1down').value;
+	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
+	valor=valor.toFixed(3);
+	localStorage["fsldown"]=valor;
+	valorf=valor.toString().concat(' db');
+	//calculos_result.fsl1=valorf;
+	document.getElementById('vfsl1down').innerHTML=valorf;
+//return valor;
+	
+}
+
+function gananciaAntenaReceptoraDown(){
+	
+	valmts=document.getElementById('distpiesdown').value;
+	frecuencia=document.getElementById('frecuemhzdown').value;
+	eficiencia_sat=document.getElementById('eficisate2down').value;
+	eficiencia_sat=eficiencia_sat/100;
+	//alert(eficiencia_sat);
+	var gp1=20*Math.log10(valmts)+20*Math.log10(frecuencia)+10*Math.log10(eficiencia_sat)- 49.92;
+	
+	var gpx=gp1;
+	 gpx=gpx.toFixed(3);
+	 localStorage["grxdown"]=gpx;
+    gpxf=gpx.toString().concat(' dbi');
+    //calculos_result.gan_anten_reci=gpxf;
+    //localStorage["gain_recep"]=calculos_result.gan_anten_reci;
+	document.formpotreceptdown.gananciareceptdown.value=gpx;
+	document.formfiguradown.gain2down.value=gpx;
+	document.getElementById('gainpxdown').innerHTML=gpxf;
+}
+
+function potenciaRecepcionDown(){
+	//var psl=pire+(-fsl)+gpx;
+	
+	fsl=document.getElementById('perdidadown').value;
+	gpx=document.getElementById('gananciareceptdown').value;
+	pire=document.getElementById('piredown').value;
+	pire1=pire*1;
+	fsl1=fsl*1;
+	gpx1=gpx*1;
+	var psl=pire1+(-fsl1)+gpx1;
+	psl1=psl.toFixed(3);
+	calculos_result.pot_recept=psl1;
+	localStorage["rsldown"]=psl1;
+	pslstr=psl1.toString().concat(' db');
+	document.getElementById('gainreceptdown').innerHTML=pslstr;
+	//return psl;
+}
+
+function calculoFiguraDown(){
+	//temp = system noise temperature	
+	gprec=document.getElementById('gain2down').value;
+	temperatura=document.getElementById('tempdown').value;
+	var calc_figura=gprec-10*Math.log10(temperatura);
+	calc_figura1=calc_figura.toFixed(3);
+	figurastr=calc_figura1.toString().concat(' db/k');
+	localStorage["gtdown"]=calc_figura1;
+	document.formcnrdown.figuracnrdown.value=calc_figura1;
+	document.getElementById('figurameritodown').innerHTML=figurastr;
+	//return calc_figura;
+}
+
+function lastDown(){
+	var k=Math.pow(10,-23);
+	pirecnr=document.getElementById('pirecnrdown').value;
+	fslcnr=document.getElementById('perdidacnrdown').value;
+	figuracnr=document.getElementById('figuracnrdown').value;
+var boltzman=1.3806*k;
+pirecnr1=pirecnr*1;
+fslcnr1=fslcnr*1;
+figuracnr1=figuracnr*1;
+boltzmanwatts=10*Math.log10(boltzman);
+boltzman1=boltzmanwatts*1;
+ var cnr=pirecnr1-fslcnr1+figuracnr1-boltzman1;
+ cnrfin=cnr.toFixed(3);
+ localStorage["cndown"]=cnrfin;
+ cnrstr=cnrfin.toString().concat(' db');
+ document.getElementById('valcnrdown').innerHTML=cnrstr;
+	
 }
 
