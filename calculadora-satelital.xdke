@@ -5,8 +5,6 @@
     "currentBuildConfiguration": "Android",
     "projectFiles": {},
     "projectDirectories": {},
-    "currentService": {
-      "service": "db_core"
-    }
+    "currentService": {}
   }
 }
