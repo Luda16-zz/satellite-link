@@ -376,6 +376,11 @@ function escala_watts(valor, unidad){
 	return valortotal;
 }
 
+function conversor(valor){
+	valorstr=valor.toString().replace('.',',');
+	return valorstr;
+}
+
 function gananciaAntenaBajando(){
 	var pi=Math.PI;
 	var valorsatelital=document.getElementById('satelitedown').value;
