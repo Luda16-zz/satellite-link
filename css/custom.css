@@ -147,6 +147,10 @@ section {
     border-top: 8px solid rgba(0, 0, 0, 0.1);
 }
 
+form{
+  color: black;
+}
+
 section .col {
     margin-bottom: 24px;
 }
@@ -154,7 +158,8 @@ section .col {
 section h4 {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 15px;    
+    margin-bottom: 15px; 
+    color: black;   
 }
 
 section hr {
