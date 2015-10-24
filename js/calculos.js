@@ -39,13 +39,47 @@ Object.defineProperty(calculos_result,'c_no', {value: '0', writable:true, enumer
   enumerable: true,
   configurable: true
 });*/
+function validarCampoVacio(arregloValores,arregloIds){
+var	valido=true;
+
+	for(i=0;i<arregloValores.length;i++){
+if(arregloValores[i]==''){
+//alert('Vacio');
+//texto=document.createTextNode( "Requerido" );
+		document.getElementById(arregloIds[i]+'_'+i).style.display='block';
+		valido=false;
+   }
+ else{
+   document.getElementById(arregloIds[i]+'_'+i).style.display='none';
+   valido=true;
+    }
+  }
+return valido;
+}
 
 function fspl_decibels(){
+		var arrayValores= new Array();
+		var arrayIds= new Array();
+		
 	var pi=Math.PI;
 	var velocidad_luz=300000000;
+
 	var distancia = document.getElementById('distmts').value;
+	
 	var frecuencia=document.getElementById('frecuehz').value;
 	var eficiencia_sat=document.getElementById('eficisate1').value;
+	
+	    arrayValores[0]=distancia;
+		arrayValores[1]=frecuencia;
+		arrayValores[2]=eficiencia_sat;
+		
+		arrayIds[0]='distmts';
+		arrayIds[1]='frecuehz';
+		arrayIds[2]='eficisate1';
+	
+	valido=validarCampoVacio(arrayValores,arrayIds);
+if(valido==true){	
+	
 	eficiencia_sat=eficiencia_sat/100;
 	var valor=eficiencia_sat*Math.pow((pi*distancia*frecuencia/velocidad_luz),2);
 	var valordb=10*Math.log10(valor);
@@ -58,7 +92,7 @@ function fspl_decibels(){
 	localStorage["gtx"] =valordb;// esto sirve para guardar 
 	document.getElementById("gainpx1").innerHTML=calculos_result.fspldecibels;
 	//return valor;	
-	
+}	
 }
 
 
