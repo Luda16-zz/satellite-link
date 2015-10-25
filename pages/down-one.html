@@ -41,6 +41,7 @@
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="satelitedown" value="">
                                         <label for="">&eta;=Eficiencia Satelite %</label>
+                                         <span id="satelitedown_0" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -48,13 +49,14 @@
                                         
                                         <input  type="text" class="validate" id="anguloantena" value="">
                                         <label for="">&Theta;= Angulo de Antena </label>
+                                        <span id="anguloantena_1" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <button class="btn waves-effect waves-light" type="button" onclick="gananciaAntenaBajando()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
-                                </button>
+                                </button><span id="antenareceptora" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="antenareceptora"></div>
+                        </div>
                    </div>                    
                 </div>
             </div>
@@ -78,28 +80,23 @@
                                         </select> 
                                         <input  type="text" class="validate" id="potxdown" value="">
                                         <label for="">Ptx=Potencia de Antena:</label>
+                                         <span id="potxdown_0" style="display: none;"> Requerido</span>
                                     </div>
-                                </div>
-                               <!-- <div class="row">
-                                    <div class=" col s6">
-                                        
-                                        <input  type="text" class="validate" id="lossc" value="">
-                                        <label for="">Perdida de Cable (dB):</label>
-                                    </div>
-                                </div> -->    
+                                </div>  
                              
                                 <div class="row">
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="ganancdown" value="">
-                                        <label for="">Gtx=Ganancia de Antena (dBI):</label>                                                                                
+                                        <label for="">Gtx=Ganancia de Antena (dBI):</label>  
+                                        <span id="ganancdown_1" style="display: none;"> Requerido</span>                                                                              
                                     </div>
                                 </div>
 
                                 <button class="btn waves-effect waves-light" type="button" onclick="getPireDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
-                                </button>
+                                </button><span id="valpiredown" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="valpiredown"></div>
+                        </div>
                     </div>                    
                 </div>
             </div>
@@ -120,6 +117,7 @@
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="potantenadown" value="">
                                         <label for="">Ptx=Potencia de Antena </label>
+                                        <span id="potantenadown_0" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -127,6 +125,7 @@
                                         
                                         <input  type="text" class="validate" id="gaindown" value="">
                                         <label for="">Gtx=Ganancia de Antena</label>
+                                        <span id="gaindown_1" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 
@@ -135,14 +134,15 @@
                                         
                                         <input  type="text" class="validate" id="distanciadown" value="">
                                         <label for="">R=Distancia Kmts</label>
+                                        <span id="distanciadown_2" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
 
                                 <button class="btn waves-effect waves-light" type="button" onclick="densidadMaximaDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
-                                </button>
+                                </button><span id="valdensitydown" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="valdensitydown"></div>
+                        </div>
                    </div>                    
                 </div>
             </div>
@@ -161,6 +161,7 @@
                                       
                                         <input  type="text" class="validate" id="distancia1down" value="">
                                         <label for="">D=Distancia en KMts</label>
+                                        <span id="distancia1down_0" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -168,14 +169,15 @@
                                         
                                         <input  type="text" class="validate" id="frecuencia1down" value="">
                                         <label for="">F=Frecuencia en MegaHertz</label>
+                                        <span id="frecuencia1down_1" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
 
                                 <button class="btn waves-effect waves-light" type="button" onclick="fslDown()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
-                                </button>
+                                </button><span id="vfsl1down" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="vfsl1down"></div>
+                        </div>
                    </div>                    
                 </div>
             </div>
