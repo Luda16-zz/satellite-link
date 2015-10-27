@@ -121,7 +121,11 @@ h4{
     top: 58px;
 }
 
-
+.card img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
 
 .button-collapse {
     margin-left: 25px;
