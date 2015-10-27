@@ -30,25 +30,19 @@
 
         <section id="contacto" class="contacto">
             <div class="container">
+               
                 <h4>GRX (ganancia antena receptora)</h4>
                 <img src="../img/formulas/grx.png" />
                 <div class="row">
                     <div class="col s12 m7">
                         <div class="row">
                             <form class="col s12" name="formulario">
-                                <div class="row">                                                                       
-                                        <!-- Dropdown Trigger -->                                        
-                                          <!-- <select name="unidades" class='btn' id="units" name="units">
-                                        	<option value="Kms">Kilometros </option>
-                                        	<option value="Meters">Metros</option>
-                                        	<option value="Miles">Millas</option>
-                                        	<option value="Feet">Pies</option>
-                                        </select>  -->
-                                        <!-- Dropdown Structure -->
+                                <div class="row"> 
                                         
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="distpies" value="">
                                         <label for="">D=Distancia en Pies</label>
+                                         <span id="distpies_0" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -56,6 +50,7 @@
                                         
                                         <input  type="text" class="validate" id="frecuemhz" value="">
                                         <label for="">F=Frecuencua en MegaHertz</label>
+                                          <span id="frecuemhz_1" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
 								
@@ -64,13 +59,16 @@
                                         
                                         <input  type="text" class="validate" id="eficisate2" value="">
                                         <label for="">&eta; = Eficiencia Satelite %</label>
+                                        <span id="eficisate2_2" style="display: none;"> Requerido</span>
+                                        
                                     </div>
                                 </div>
                                 <button class="btn waves-effect waves-light" type="button" onclick="ganancia_antena_receptora()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
+                                <span id="gainpx" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="gainpx"></div>
+                        </div>
                    </div>                    
                 </div>
             </div>
@@ -84,18 +82,10 @@
                         <div class="row">
                             <form class="col s12" name="form_potrecept">
                                 <div class="row">                                                                       
-                                        <!-- Dropdown Trigger -->                                        
-                                          <!-- <select name="unidades" class='btn' id="units" name="units">
-                                        	<option value="Kms">Kilometros </option>
-                                        	<option value="Meters">Metros</option>
-                                        	<option value="Miles">Millas</option>
-                                        	<option value="Feet">Pies</option>
-                                        </select>  -->
-                                        <!-- Dropdown Structure -->
-                                        
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="pire" value="" name="pire">
                                         <label for="">PIRE</label>
+                                         <span id="pire_0" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -103,21 +93,24 @@
                                         
                                         <input  type="text" class="validate" id="perdida" value="" name="perdida">
                                         <label for="">FSL=Perdida en el espacio libre </label>
+                                         <span id="perdida_1" style="display: none;"> Requerido</span>
+                                        
                                     </div>
                                 </div>
 								
 								<div class="row">
-                                    <div class="col s6">
-                                        
+                                    <div class="col s6">  
                                         <input  type="text" class="validate" id="ganancia_recept" value="" name="ganancia_recept">
                                         <label for="">GRX=Ganancia Antena Receptora</label>
+                                        <span id="ganancia_recept_2" style="display: none;"> Requerido</span>
                                     </div>
                                 </div>
                                 <button class="btn waves-effect waves-light" type="button" onclick="potencia_recepcion()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
+                                <span id="gainrecept" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="gainrecept"></div>
+                        </div>
                    </div>                    
                 </div>
             </div>
@@ -131,19 +124,11 @@
                     <div class="col s12 m7">
                         <div class="row">
                             <form class="col s12" name="form_figura">
-                                <div class="row">                                                                       
-                                        <!-- Dropdown Trigger -->                                        
-                                          <!-- <select name="unidades" class='btn' id="units" name="units">
-                                        	<option value="Kms">Kilometros </option>
-                                        	<option value="Meters">Metros</option>
-                                        	<option value="Miles">Millas</option>
-                                        	<option value="Feet">Pies</option>
-                                        </select>  -->
-                                        <!-- Dropdown Structure -->
-                                        
+                                <div class="row">      
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="gain2" value="" name="gain2">
                                         <label for="">GRX=Ganancia Antena Receptora</label>
+                                        <span id="gain2_0" style="display: none;">Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -151,13 +136,14 @@
                                         
                                         <input  type="text" class="validate" id="temp" value="" name="temp">
                                         <label for="">T=Temperatura (Grados Kelvin)</label>
+                                        <span id="temp_1" style="display: none;">Requerido</span>
                                     </div>
                                 </div>
                                 <button class="btn waves-effect waves-light" type="button" onclick="calculo_figura()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
-                                </button>
+                                </button><span id="figuramerito" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="figuramerito"></div>
+                        </div>
                    </div>                    
                 </div>
             </div>
@@ -172,18 +158,10 @@
                         <div class="row">
                             <form class="col s12" name="form_cnr">
                                 <div class="row">                                                                       
-                                        <!-- Dropdown Trigger -->                                        
-                                          <!-- <select name="unidades" class='btn' id="units" name="units">
-                                        	<option value="Kms">Kilometros </option>
-                                        	<option value="Meters">Metros</option>
-                                        	<option value="Miles">Millas</option>
-                                        	<option value="Feet">Pies</option>
-                                        </select>  -->
-                                        <!-- Dropdown Structure -->
-                                        
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="pirecnr" value="" name="pirecnr">
                                         <label for="">PIRE</label>
+                                        <span id="pirecnr_0" style="display: none;">Requerido</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -191,6 +169,8 @@
                                         
                                         <input  type="text" class="validate" id="perdidacnr" value="" name="perdidacnr">
                                         <label for="">FSL=Perdida en el espacio libre</label>
+                                          <span id="perdidacnr_1" style="display: none;">Requerido</span>
+                                        
                                     </div>
                                 </div>
 								
@@ -199,13 +179,16 @@
                                         
                                         <input  type="text" class="validate" id="figuracnr" value="" name="figuracnr">
                                         <label for="">G/T=Figura Merito</label>
+                                         <span id="figuracnr_2" style="display: none;">Requerido</span>
                                     </div>
                                 </div>
                                 <button class="btn waves-effect waves-light" type="button" onclick="last()" name="actionpire" id="actionpire">Calcular
                                     <i class="mdi-content-send right"></i>
                                 </button>
+                                <span id="valcnr" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div><div id="valcnr"></div>
+                            </form>
+                        </div>
                    </div>                    
                 </div>
             </div>
