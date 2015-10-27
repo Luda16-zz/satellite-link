@@ -18,4 +18,4 @@ This project is built with MaterializeCSS library and Intel XDK framework which 
 
 **Procesos Down**
 
-![Enlaces satelitales](https://github.com/Luda16/satellite-link/blob/master/img/SatteliteLink.jpg)
+![Fonts Bundle](https://github.com/Luda16/satellite-link/blob/master/img/SatteliteLink.jpg)
