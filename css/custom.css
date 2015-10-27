@@ -121,10 +121,17 @@ h4{
     top: 58px;
 }
 
+.card{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .card img{
       display: block;
       margin-left: auto;
       margin-right: auto;
+      width: 90%;
 }
 
 .button-collapse {
