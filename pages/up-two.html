@@ -12,6 +12,11 @@
     <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../css/custom.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <!-- Cargamos jQuery y materialize js -->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/feel.js"></script>
+    
 </head>
 
 <body onload="carga()"> 
@@ -29,13 +34,27 @@
     <main>                 
 
         <section id="contacto" class="contacto">
+            <div class="row">
             <div class="container">
-               
-                <h4>GRX (ganancia antena receptora)</h4>
-                <img src="../img/formulas/grx.png" />
-                <div class="row">
-                    <div class="col s12 m7">
-                        <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">               
+                        <h4>GRX (ganancia antena receptora)</h4>
+                        <img src="../img/formulas/grx.png" />
+                    
+                        <ul class="collapsible" data-collapsible="expandable">
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Variable 1</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">place</i>Variable 2</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">whatshot</i>Variable 3</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                        </ul>
                             <form class="col s12" name="formulario">
                                 <div class="row"> 
                                         
@@ -68,20 +87,35 @@
                                 </button>
                                 <span id="gainpx" align="center" style="margin-left: 25%;"></span>
                             </form>
-                        </div>
-                   </div>                    
+                        </div>    
+                         </div>                    
                 </div>
             </div>
         </section>
          <section id="contacto" class="contacto">
+            <div class="row">
             <div class="container">
+                <div class="col s12 m6">
+                    <div class="card">       
                 <h4>RSL (Potencia de Recepci&oacute;n)</h4>
                 <img src="../img/formulas/rsl.png" />
-                <div class="row">
-                    <div class="col s12 m7">
-                        <div class="row">
-                            <form class="col s12" name="form_potrecept">
-                                <div class="row">                                                                       
+                    <ul class="collapsible" data-collapsible="expandable">
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Variable 1</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">place</i>Variable 2</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">whatshot</i>Variable 3</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                          </ul>
+
+                            <div class="row">
+                                <div class="col s6">
                                     <div class="col s6">
                                         <input  type="text" class="validate" id="pire" value="" name="pire">
                                         <label for="">PIRE</label>
@@ -113,16 +147,29 @@
                         </div>
                    </div>                    
                 </div>
-            </div>
         </section>
         
-<section id="contacto" class="contacto">
-            <div class="container">
+<<section id="contacto" class="contacto">
+             <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
                 <h4>G/T (Figura Merito)</h4>
                 <img src="../img/formulas/figura.png" />
-                <div class="row">
-                    <div class="col s12 m7">
-                        <div class="row">
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Variable 1</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>Variable 2</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Variable 3</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul>    
+                
                             <form class="col s12" name="form_figura">
                                 <div class="row">      
                                     <div class="col s6">
@@ -145,17 +192,31 @@
                             </form>
                         </div>
                    </div>                    
-                </div>
-            </div>
+                </div>            
         </section>  
         
-      <section id="contacto" class="contacto">
-            <div class="container">
+       <section id="contacto" class="contacto">
+             <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
                 <h4>C/N (Densidad de Ruido)</h4>
                 <img src="../img/formulas/cn.png" />
-                <div class="row">
-                    <div class="col s12 m7">
-                        <div class="row">
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Variable 1</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>Variable 2</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Variable 3</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul>    
+
+
                             <form class="col s12" name="form_cnr">
                                 <div class="row">                                                                       
                                     <div class="col s6">
@@ -191,7 +252,6 @@
                         </div>
                    </div>                    
                 </div>
-            </div>
         </section>
         
       <h1 align="left"  class="text">Mostrar calculos de UP
@@ -209,9 +269,5 @@
             </div>
         </div>
     </footer>
-    <!-- Cargamos jQuery y materialize js -->
-    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>s
-    <script type="text/javascript" src="../js/materialize.js"></script>
-    <script type="text/javascript" src="../js/feel.js"></script>
-    
+ 
 </body>
