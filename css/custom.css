@@ -75,6 +75,33 @@ main{
   }
 
 
+.index{
+
+}
+
+.index-image{
+  height: 250px;
+  padding:  0px 0px 0px 0px !important;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.index-button{
+  margin-right: 20px;
+  margin-bottom: 0px;
+
+}
+
+.small-text{
+  padding: 0px 0px 0px 0px !important;
+  font-family: Moderne;
+}
+
+.big-text{
+  padding: 0px 0px 0px 0px !important;
+  font-family: Moderne;
+}
+
 .home-brand {
     text-align: center;
     padding: 2em;
