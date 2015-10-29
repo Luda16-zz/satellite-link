@@ -361,6 +361,14 @@ document.getElementById('rslresultdown').innerHTML= localStorage["rsldown"];
 document.getElementById('gtresultdown').innerHTML= localStorage["gtdown"];
 document.getElementById('cnresultdown').innerHTML= localStorage["cndown"];
 
+document.getElementById('gtxresultup').innerHTML=localStorage["gtx"];
+	document.getElementById('pireresultup').innerHTML=localStorage["pire"];
+	document.getElementById('densidadresultup').innerHTML=localStorage["density"];
+document.getElementById('fslresultup').innerHTML=localStorage["fsl"];
+document.getElementById('grxresultup').innerHTML= localStorage["grx"];
+document.getElementById('rslresultup').innerHTML= localStorage["rsl"];
+document.getElementById('gtresultup').innerHTML= localStorage["gt"];
+document.getElementById('cnresultup').innerHTML= localStorage["cn"];
 	
 }
 
