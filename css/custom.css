@@ -178,6 +178,10 @@ li {
     list-style-type: none;
 }
 
+i.left {
+    padding-top: 20px;
+}
+
 section {
     padding: 4% 0 4% 0;
 }
