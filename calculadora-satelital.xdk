@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "e41002c9-2fb5-4921-b45f-f7d82ed26f6e",
-      "lastModifiedDate": 1445396874177,
+      "lastModifiedDate": 1446088270537,
       "creationDate": 1444450418921
     },
     "sourceDirectory": "",
@@ -116,7 +116,32 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "android/drawable-ldpi/ic_launcher.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "android/drawable-xhdpi/ic_launcher.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          },
+          {
+            "relPath": "android/drawable-mdpi/ic_launcher.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "android/drawable-hdpi/ic_launcher.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          }
+        ],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
