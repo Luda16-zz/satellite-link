@@ -184,7 +184,8 @@ function densidadmaxima(){
 	//alert(val3);
 	localStorage["density"]=val4;
 	//valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
-	calculos_result.densidad=val4;
+	val4f=val4.toString().concat(' db');
+	calculos_result.densidad=val4f;
 	document.getElementById('valdensity').innerHTML=calculos_result.densidad;
 }
 }
