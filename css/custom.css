@@ -75,23 +75,6 @@ main{
   }
 
 
-.index{
-  text-align: center;
-  height: 100vh;
-}
-
-.index-image{
-  height: 300px;
-  padding-top:  25px;
-  padding-bottom:  25px ;
-  margin-left: auto;
-  margin-right: auto; 
-}
-
-.index-button{
-  margin-right: 20px;
-  margin-top: 3em;
-}
 
 .small-text{
   padding: 0;
@@ -99,6 +82,7 @@ main{
   margin-bottom: 8px;
   font-family: Moderne;
   line-height: 150%;
+  font-size: 2em;
 }
 
 .big-text{
@@ -106,15 +90,46 @@ main{
   margin: 0;
   font-family: Moderne;
 }
+.titulo1{
+    line-height: 1.3em !important;
+    font-family: Moderne;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
 
-.home-brand {
+h4{
+    font-family: Makhina;
+}
+.index{
+  text-align: center;
+  height: 100vh;
+}
+
+.index-image{
+  height: 300px;
+  padding-top:  25px;  
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.index-button{
+  margin-right: 20px;  
+  margin-bottom: 20px;
+}
+
+.inicio-header {
     text-align: center;
     padding: 2em;
     background-image: url("../img/fondo4.jpg");
-    background-repeat: no-repeat;    
-    background-position: 40% 60%; 
+    background-repeat: no-repeat;
+    background-position: 40% 60%;
     max-width: 100%;
-    height: auto;
+    height: 15em;
+}
+
+.inicio-card{
+      top: -60px;
 }
 
 .recursos-brand {
@@ -133,15 +148,8 @@ main{
     height: 150px;
 }
 
-h1 {
-    font-size: 1.5rem;
-    line-height: 25px;
-    font-family: Moderne;
-}
 
-h4{
-    font-family: Makhina;
-}
+
 
 .home-brand .btn-floating {
     position: relative;
