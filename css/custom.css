@@ -60,7 +60,8 @@ main{
   background-size:cover;
   background-attachment: fixed;
   background-position: center center;
-  height: 100vh;
+  position:relative;
+
 }
 
   @media only screen and (max-width: 992px) {
@@ -83,20 +84,31 @@ main{
   margin-bottom: 8px;
   font-family: Moderne;
   line-height: 150%;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .big-text{
   padding: 0;
   margin: 0;
   font-family: Moderne;
+  font-size: 2em;
 }
+
 .titulo1{
     line-height: 1.3em !important;
     font-family: Moderne;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
+}
+
+.titulo2-white{
+    font-family: Makhina;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    top: 2em;
+    position: relative; 
 }
 
 h4{
