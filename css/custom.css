@@ -111,6 +111,12 @@ main{
     position: relative; 
 }
 
+.titulo3-nav{
+    font-family: Makhina;
+    font-size: 23px !important;
+    
+}
+
 h4{
     font-family: Makhina;
 }
