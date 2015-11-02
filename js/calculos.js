@@ -139,6 +139,7 @@ var arrayValores= new Array();
 	var val_pire=parseInt(potenciafinal1)+parseInt(ganancia1);
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
+	document.formirl.irlpire.value=val_pire;
 	calculos_result.pire=val_pire;
 	localStorage["pire"]=calculos_result.pire;
 	document.getElementById("valpire").innerHTML=calculos_result.pire;
@@ -190,6 +191,71 @@ function densidadmaxima(){
 }
 }
 
+function irlDown(){
+	document.getElementById('valirldown').innerHTML='';
+	//var pi=Math.PI;
+	var pire=document.getElementById('irlpiredown').value;
+	var fsl=document.getElementById('irlfsldown').value;
+	
+	var arrayValores= new Array();
+	var arrayIds= new Array();
+	
+	arrayIds[0]='irlpiredown';
+	arrayIds[1]='irlfsldown';
+	
+	arrayValores[0]=pire;
+	arrayValores[1]=fsl;
+	
+
+  valido=validarCampoVacio(arrayValores,arrayIds);
+	
+	if(valido==true){
+	val_irl=pire-fsl;
+	
+	val_irl1=val_irl.toFixed(3);
+	//alert(val3);
+	localStorage["irldown"]=val_irl1;
+	//valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
+	valor=val_irl1.toString().concat(' db');
+	document.getElementById('valirldown').innerHTML=valor;
+}
+}
+
+
+
+
+
+function irlup(){
+	document.getElementById('valirlup').innerHTML='';
+	//var pi=Math.PI;
+	var pire=document.getElementById('irlpire').value;
+	var fsl=document.getElementById('irlfsl').value;
+	
+	var arrayValores= new Array();
+	var arrayIds= new Array();
+	
+	arrayIds[0]='irlpire';
+	arrayIds[1]='irlfsl';
+	
+	arrayValores[0]=pire;
+	arrayValores[1]=fsl;
+	
+
+  valido=validarCampoVacio(arrayValores,arrayIds);
+	
+	if(valido==true){
+	val_irl=pire-fsl;
+	
+	val_irl1=val_irl.toFixed(3);
+	//alert(val3);
+	localStorage["irl"]=val_irl1;
+	//valor3f=val3.toString().concat(' Watts/mts'.concat('2'.sup()));//.concat('2').sup();
+	valor=val_irl1.toString().concat(' db');
+	document.getElementById('valirlup').innerHTML=valor;
+}
+}
+
+
 
 //Funcion que esta en el punto 5
 function fsl_segundo(){
@@ -216,6 +282,7 @@ function fsl_segundo(){
 	localStorage["fsl"]=valor;
 	valorf=valor.toString().concat(' db');
 	calculos_result.fsl1=valorf;
+	document.formirl.irlfsl.value=valor;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
 	}
 //return valor;
@@ -340,10 +407,12 @@ function cargadown(){
 
 //Aqui cargamos los datos en la tabla1
 function carga_resultados_up(){
+	//alert(localStorage["irl"]);
 	document.getElementById('gtxresult').innerHTML=localStorage["gtx"];
 	document.getElementById('pireresult').innerHTML=localStorage["pire"];
 	document.getElementById('densidadresult').innerHTML=localStorage["density"];
 document.getElementById('fslresult').innerHTML=localStorage["fsl"];
+document.getElementById('irlresult').innerHTML= localStorage["irl"];
 document.getElementById('grxresult').innerHTML= localStorage["grx"];
 document.getElementById('rslresult').innerHTML= localStorage["rsl"];
 document.getElementById('gtresult').innerHTML= localStorage["gt"];
@@ -361,7 +430,8 @@ document.getElementById('grxresultdown').innerHTML= localStorage["grxdown"];
 document.getElementById('rslresultdown').innerHTML= localStorage["rsldown"];
 document.getElementById('gtresultdown').innerHTML= localStorage["gtdown"];
 document.getElementById('cnresultdown').innerHTML= localStorage["cndown"];
-
+document.getElementById('irlresult').innerHTML= localStorage["irl"];
+document.getElementById('irlresultdown').innerHTML= localStorage["irldown"];
 document.getElementById('gtxresultup').innerHTML=localStorage["gtx"];
 	document.getElementById('pireresultup').innerHTML=localStorage["pire"];
 	document.getElementById('densidadresultup').innerHTML=localStorage["density"];
@@ -569,6 +639,7 @@ if(valido==true){
 	var val_pire=potenciafinal1+ganancia1;
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
+	document.formirldown.irlpiredown.value=val_pire;
 	localStorage["piredown"]=val_pire;
 	document.getElementById("valpiredown").innerHTML=val_pire;
 
@@ -631,6 +702,7 @@ function fslDown(){
 	  
 	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
 	valor=valor.toFixed(3);
+	document.formirldown.irlfsldown.value=valor;
 	localStorage["fsldown"]=valor;
 	valorf=valor.toString().concat(' db');
 	//calculos_result.fsl1=valorf;
