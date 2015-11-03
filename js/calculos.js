@@ -404,6 +404,8 @@ function cargadown(){
 	document.formpotreceptdown.perdidadown.value=localStorage["fsldown"];
 	document.formcnrdown.pirecnrdown.value=localStorage["piredown"];
 	document.formcnrdown.perdidacnrdown.value=localStorage["fsldown"];
+	document.formirldown.irlpiredown.value=localStorage["piredown"];
+	document.formirldown.irlfsldown.value=localStorage["fsldown"];
 }
 
 
@@ -641,7 +643,7 @@ if(valido==true){
 	var val_pire=potenciafinal1+ganancia1;
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
-	document.formirldown.irlpiredown.value=val_pire;
+	//document.formirldown.irlpiredown.value=val_pire;
 	localStorage["piredown"]=val_pire;
 	document.getElementById("valpiredown").innerHTML=val_pire;
 
@@ -704,7 +706,7 @@ function fslDown(){
 	  
 	var valor = 20*Math.log10(distancia_kms)+20*Math.log10(frecuencia_mhz)+32.45;
 	valor=valor.toFixed(3);
-	document.formirldown.irlfsldown.value=valor;
+	//document.formirldown.irlfsldown.value=valor;
 	localStorage["fsldown"]=valor;
 	valorf=valor.toString().concat(' db');
 	//calculos_result.fsl1=valorf;
