@@ -31,7 +31,55 @@
           <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
     </nav>  
     <main>                 
+ <section id="contacto" class="contacto">
+        <div class="row">
+        <div class="col s12 m6">
+          <div class="card">                
+                    <h1 class="titulo1">IRL (Nivel Isotropico de Recepcion)</h1> 
+                    <img src="../img/formulas/irl.png"/>
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                              <div class="collapsible-header">Acerca</div>
+                              <div class="collapsible-body"><p>Este nivel indica como recibe la señal enviada desde tierra, alcanzando la antena receptora del satélite.
+                                </p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">PIRE</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">FSL</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                        </ul>  
 
+                    <form class="col s12" name="formirl" id="formirl">
+                        <div class="row"> 
+                            <div class="col s6">
+                                <input  type="text" class="validate" id="irlpire" value="">
+                                <label for="">PIRE</label>
+                                <span id="irlpire_0" style="display: none;">Requerido</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                        
+                                <input  type="text" class="validate" id="irlfsl" value="">
+                                <label for="">FSL</label>
+                                 <span id="irlfsl_1" style="display: none;">Requerido</span>
+                             </div>
+                         </div>
+                                
+                        <button class="btn waves-effect waves-light" type="button" onclick="irlup()" name="actionpire" id="actionpire">Calcular
+                            <i class="mdi-content-send right"></i>
+                         </button>
+                        <span id="valirlup" align="center" style="margin-left: 25%;"></span> 
+                    </form>
+                    <div class="card-action">
+                      <a href="recursos.html">Ayuda</a>                      
+                    </div>                    
+                </div>                 
+        </section>
         <section id="contacto" class="contacto">
             <div class="row">
             	  <div class="col s12 m6">

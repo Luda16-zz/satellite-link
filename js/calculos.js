@@ -128,9 +128,9 @@ var arrayValores= new Array();
   valido=validarCampoVacio(arrayValores,arrayIds);
   
   if (valido==true){
-	indice=document.form_pire.units.selectedIndex; 
-	unidad=document.form_pire.units.options[indice].value;
-	var potenciafinal=escala_watts(potenciatx,unidad);
+	//indice=document.form_pire.units.selectedIndex; 
+	//unidad=document.form_pire.units.options[indice].value;
+	var potenciafinal=potenciatx
 	//alert(potenciafinal);
 	potenciafinal1=potenciafinal*1;
 	document.densidad.potantena.value=potenciafinal1;
@@ -139,7 +139,7 @@ var arrayValores= new Array();
 	var val_pire=parseInt(potenciafinal1)+parseInt(ganancia1);
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
-	document.formirl.irlpire.value=val_pire;
+	//document.formirl.irlpire.value=val_pire;
 	calculos_result.pire=val_pire;
 	localStorage["pire"]=calculos_result.pire;
 	document.getElementById("valpire").innerHTML=calculos_result.pire;
@@ -282,7 +282,7 @@ function fsl_segundo(){
 	localStorage["fsl"]=valor;
 	valorf=valor.toString().concat(' db');
 	calculos_result.fsl1=valorf;
-	document.formirl.irlfsl.value=valor;
+	//document.formirl.irlfsl.value=valor;
 	document.getElementById('vfsl1').innerHTML=calculos_result.fsl1;
 	}
 //return valor;
@@ -395,6 +395,8 @@ function carga(){
 	document.form_potrecept.perdida.value=localStorage["fsl"];
 	document.form_cnr.pirecnr.value=localStorage["pire"];
 	document.form_cnr.perdidacnr.value=localStorage["fsl"];
+	document.formirl.irlpire.value=localStorage["pire"];
+	document.formirl.irlfsl.value=localStorage["fsl"];
 }
 
 function cargadown(){

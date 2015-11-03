@@ -98,6 +98,129 @@
         </section>
 
         <section id="contacto" class="contacto">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
+                    </div>    
+                </div>
+            </div> 
+        </section>
+
+         <section id="contacto" class="contacto">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
+                        <h1 class="titulo1">PIRE</h1>        
+                        <img src="../img/formulas/pire.png" />
+                        <ul class="collapsible" data-collapsible="expandable">
+                            <li>
+                              <div class="collapsible-header">Acerca</div>
+                              <div class="collapsible-body"><p>La Potencia Isotrópica Radiada Equivalente, es la cantidad de potencia que emitiría una antena 
+                            isotrópica teórica (es decir, aquella que distribuye la potencia exactamente igual en todas direcciones).</p></div>
+                            </li>
+                           
+                            <li>
+                              <div class="collapsible-header">Potencia de Transmision</div>
+                              <div class="collapsible-body"><p>Cuanto mayor sea la potencia de transmisión, el tiempo más corto de espera, 
+                                se puede definir como la  magnitud que atraviesa el medio de transmisión.
+                                .</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">Ganancia de Antena</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>    
+                        </ul> 
+                           <form class="col s12" name="form_pire" id="form_pire">
+                            <div class="row">
+                              <div class="col s6">
+                                    <input  type="text" class="validate" id="potx" value="">
+                                    <label for="">Ptx=Potencia de Antena</label>
+                                    <span id="potx_0" style="display: none;">Requerido</span>
+                                </div>
+                                <div class="col s6">
+                                    <input  type="text" class="validate" id="gananc" value="">
+                                    <label for="">Gtx=Ganancia de Antena</label>
+                                    <span id="gananc_1" style="display: none;">Requerido</span>
+                                </div>
+                            </div>
+                            <button class="btn waves-effect waves-light" type="button" onclick="getPire()" name="actionpire" id="actionpire">Calcular
+                                <i class="mdi-content-send right"></i>
+                            </button>
+                            <span id="valpire" align="center" style="margin-left: 25%;"></span>  
+                        </form>
+                    </div>    
+                </div>
+            </div> 
+        </section>
+
+ <section id="contacto" class="contacto">
+        <div class="row">
+        <div class="col s12 m6">
+          <div class="card">                
+                    <h1 class="titulo1">Densidad de Flujo de Potencia</h1> 
+                    <img src="../img/formulas/Omax.png"/>
+                    <ul class="collapsible" data-collapsible="expandable">
+                      <li>
+                              <div class="collapsible-header">Acerca</div>
+                              <div class="collapsible-body"><p>El nivel de señal de una onda incidente de  una antena de satélite se mide por la densidad de flujo de potencia
+                                  (expresada en vatios por metro cuadrado) del frente de onda que se aproxima.
+                                </p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">Potencia de Antena</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">Ganancia de Antena</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">Distancia en Kmts</div>
+                              <div class="collapsible-body"><p>Distancia del satélite desde un punto en tierra</p></div>
+                            </li>
+                        </ul>  
+
+                    <form class="col s12" name="densidad" id="densidad">
+                        <div class="row"> 
+                            <div class="col s6">
+                                <input  type="text" class="validate" id="potantena" value="">
+                                <label for="">Ptx=Potencia de Antena </label>
+                                <span id="potantena_0" style="display: none;">Requerido</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                        
+                                <input  type="text" class="validate" id="gain" value="" name="gain">
+                                <label for="">Gtx=Ganancia de Antena</label>
+                                 <span id="gain_1" style="display: none;">Requerido</span>
+                             </div>
+                         </div>
+                                
+                        <div class="row">
+                             <div class="col s6">
+                                        
+                                <input  type="text" class="validate" id="distancia" value="">
+                                <label for="">R=Distancia Kmts</label>
+                                <span id="distancia_2" style="display: none;">Requerido</span> 
+                        </div>
+                                </div>
+
+                        <button class="btn waves-effect waves-light" type="button" onclick="densidadmaxima()" name="actionpire" id="actionpire">Calcular
+                            <i class="mdi-content-send right"></i>
+                         </button>
+                        <span id="valdensity" align="center" style="margin-left: 25%;"></span> 
+                    </form>
+                    <div class="card-action">
+                      <a href="recursos.html">Ayuda</a>                      
+                    </div>                    
+                </div>                 
+        </section>
+
+
+
+
+        <section id="contacto" class="contacto">
               
              <div class="row">
              	  <div class="col s12 m6">  
@@ -150,173 +273,8 @@
             </div> 
 
         </section>
-
-        <section id="contacto" class="contacto">
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card">
-                        <h1 class="titulo1">PIRE</h1>        
-                        <img src="../img/formulas/pire.png" />
-                        <ul class="collapsible" data-collapsible="expandable">
-                            <li>
-                              <div class="collapsible-header">Acerca</div>
-                              <div class="collapsible-body"><p>La Potencia Isotrópica Radiada Equivalente, es la cantidad de potencia que emitiría una antena 
-                            isotrópica teórica (es decir, aquella que distribuye la potencia exactamente igual en todas direcciones).</p></div>
-                            </li>
-                           
-                            <li>
-                              <div class="collapsible-header">Potencia de Transmision</div>
-                              <div class="collapsible-body"><p>Cuanto mayor sea la potencia de transmisión, el tiempo más corto de espera, 
-                              	se puede definir como la  magnitud que atraviesa el medio de transmisión.
-                              	.</p></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header">Ganancia de Antena</div>
-                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                            </li>    
-                        </ul> 
-
-                            <div class="row">
-                                <div class="col s6">
-                                    <input  type="text" class="validate" id="gananc" value="">
-                                    <label for="">Gtx=Ganancia de Antena</label>
-                                    <span id="gananc_1" style="display: none;">Requerido</span>
-                                </div>
-                            </div>
-                            <button class="btn waves-effect waves-light" type="button" onclick="getPire()" name="actionpire" id="actionpire">Calcular
-                                <i class="mdi-content-send right"></i>
-                            </button>
-                            <span id="valpire" align="center" style="margin-left: 25%;"></span>  
-                        </form>
-                    </div>    
-                </div>
-            </div> 
-        </section>
-
-
-        <section id="contacto" class="contacto">
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card">
-                    </div>    
-                </div>
-            </div> 
-        </section>
-
-
-        <section id="contacto" class="contacto">
-        <div class="row">
-        <div class="col s12 m6">
-          <div class="card">                
-                    <h1 class="titulo1">Densidad de Flujo de Potencia</h1> 
-                    <img src="../img/formulas/Omax.png"/>
-                    <ul class="collapsible" data-collapsible="expandable">
-                    	<li>
-                              <div class="collapsible-header">Acerca</div>
-                              <div class="collapsible-body"><p>El nivel de señal de una onda incidente de  una antena de satélite se mide por la densidad de flujo de potencia
-                              	  (expresada en vatios por metro cuadrado) del frente de onda que se aproxima.
-                                </p></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header">Potencia de Antena</div>
-                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header">Ganancia de Antena</div>
-                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header">Distancia en Kmts</div>
-                              <div class="collapsible-body"><p>Distancia del satélite desde un punto en tierra</p></div>
-                            </li>
-                        </ul>  
-
-                    <form class="col s12" name="densidad" id="densidad">
-                        <div class="row"> 
-                            <div class="col s6">
-                                <input  type="text" class="validate" id="potantena" value="">
-                                <label for="">Ptx=Potencia de Antena </label>
-                                <span id="potantena_0" style="display: none;">Requerido</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s6">
-                                        
-                                <input  type="text" class="validate" id="gain" value="" name="gain">
-                                <label for="">Gtx=Ganancia de Antena</label>
-                                 <span id="gain_1" style="display: none;">Requerido</span>
-                             </div>
-                         </div>
-                                
-                        <div class="row">
-                             <div class="col s6">
-                                        
-                                <input  type="text" class="validate" id="distancia" value="">
-                                <label for="">R=Distancia Kmts</label>
-                                <span id="distancia_2" style="display: none;">Requerido</span> 
-                        </div>
-                                </div>
-
-                        <button class="btn waves-effect waves-light" type="button" onclick="densidadmaxima()" name="actionpire" id="actionpire">Calcular
-                            <i class="mdi-content-send right"></i>
-                         </button>
-                        <span id="valdensity" align="center" style="margin-left: 25%;"></span> 
-                    </form>
-                    <div class="card-action">
-                      <a href="#">Ayuda</a>                      
-                    </div>                    
-                </div>                 
-        </section>
-
-     <section id="contacto" class="contacto">
-        <div class="row">
-        <div class="col s12 m6">
-          <div class="card">                
-                    <h1 class="titulo1">IRL (Nivel Isotropico de Recepcion)</h1> 
-                    <img src="../img/formulas/irl.png"/>
-                    <ul class="collapsible" data-collapsible="expandable">
-                    	<li>
-                              <div class="collapsible-header">Acerca</div>
-                              <div class="collapsible-body"><p>Este nivel indica como recibe la señal enviada desde tierra, alcanzando la antena receptora del satélite.
-                                </p></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header">PIRE</div>
-                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header">FSL</div>
-                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                            </li>
-                        </ul>  
-
-                    <form class="col s12" name="formirl" id="formirl">
-                        <div class="row"> 
-                            <div class="col s6">
-                                <input  type="text" class="validate" id="irlpire" value="">
-                                <label for="">PIRE</label>
-                                <span id="irlpire_0" style="display: none;">Requerido</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s6">
-                                        
-                                <input  type="text" class="validate" id="irlfsl" value="">
-                                <label for="">FSL</label>
-                                 <span id="irlfsl_1" style="display: none;">Requerido</span>
-                             </div>
-                         </div>
-                                
-                        <button class="btn waves-effect waves-light" type="button" onclick="irlup()" name="actionpire" id="actionpire">Calcular
-                            <i class="mdi-content-send right"></i>
-                         </button>
-                        <span id="valirlup" align="center" style="margin-left: 25%;"></span> 
-                    </form>
-                    <div class="card-action">
-                      <a href="#">Ayuda</a>                      
-                    </div>                    
-                </div>                 
-        </section>
+       
+    
     </main>
      
         <div class="card">

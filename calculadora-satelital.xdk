@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "e41002c9-2fb5-4921-b45f-f7d82ed26f6e",
-      "lastModifiedDate": 1446088270537,
+      "lastModifiedDate": 1446502394675,
       "creationDate": 1444450418921
     },
     "sourceDirectory": "",
@@ -76,7 +76,7 @@
           "android-targetSdkVersion": "19",
           "android-installLocation": "auto"
         },
-        "isActive_": false,
+        "isActive_": true,
         "appName_": "calculadora-satelital",
         "appID_": "not.yet.specified",
         "appAccess_": {
@@ -103,7 +103,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": false
         },
         "isActive_": true,
         "appName_": "calculadora-satelital",
