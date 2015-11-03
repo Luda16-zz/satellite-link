@@ -79,6 +79,27 @@
             <div class="row">
                 <div class="col s12 m6">
                     <div class="card">
+                       <h1 class="titulo1">PTX (Potencia de transmision)</h1>  
+                        <img src="../img/formulas/ptx.png" /> 
+                        <ul class="collapsible" data-collapsible="expandable">
+                           <li>
+                              <div class="collapsible-header">Acerca</div>
+                              <div class="collapsible-body"><p>Cuanto mayor sea la potencia de transmisión, el tiempo más corto de espera, se puede definir como la  magnitud que atraviesa el medio de transmisión en el proceso de downlink usa una potencia diferente  y en general este valor es dado en (Watts) pero se debe manejar en la ecuación en (dB)</p></div>
+                            </li> <ul>
+
+                             <form class="col s12" name="formpotenciatxdown">
+                            <div class="row">
+                                <div class="col s6">
+                                    <input  type="text" class="validate" id="downpotenciatx" value="">
+                                    <label for="">PTX= Potencia</label>
+                                    <span id="potenciatxdown_0" style="display: none;"> Requerido</span>
+                                </div>
+                            </div>
+                          <button class="btn waves-effect waves-light" type="button" onclick="calculopotenciatxdown()" name="actionpire" id="actionpire">Calcular
+                                <i class="mdi-content-send right"></i>
+                            </button>
+                            <span id="potenciatxdown" align="center" style="margin-left: 25%;"></span>
+                        </form>
                     </div>    
                 </div>
             </div> 
@@ -105,13 +126,6 @@
                             <form class="col s12" name="formpiredown" id="formpiredown">
                                 <div class="row">                                                                                                                         
                                     <div class=" col s6">
-                                        <label>Unidad de Medida</label>                                        
-                                        <select class='btn' id="units" name="units">
-                                            <option value="Miliwatts">Miliwatts </option>
-                                            <option value="Watts">Watts</option>
-                                            <option value="dBm">dBm</option>
-                                            <option value="dbw">dbw</option>
-                                        </select> 
                                         <input  type="text" class="validate" id="potxdown" value="">
                                         <label for="">Ptx=Potencia de Antena:</label>
                                          <span id="potxdown_0" style="display: none;"> Requerido</span>

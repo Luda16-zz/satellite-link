@@ -103,11 +103,50 @@ if(valido==true){
 }
 
 
-function potenciatx(pot){
+function calculopotenciatx(){
+document.getElementById("potenciatxup").innerHTML='';
+var pot=document.getElementById('potenciatx').value;
+var arrayValores= new Array();
+	var arrayIds= new Array();
+arrayIds[0]='potenciatx';
+arrayValores[0]=pot;
+ //alert(valido);
+ valido=validarCampoVacio(arrayValores,arrayIds);
 
+if (valido==true){
 var potenciatotal=10*Math.log10(pot);
-return potenciatotal;
+potenciafixed=potenciatotal.toFixed(3);
+potenciastring=potenciafixed.toString().concat(' db');
+document.form_pire.potx.value=potenciafixed;
+document.densidad.potantena.value=potenciafixed;
+localStorage["potx"]=potenciafixed;
+	document.getElementById("potenciatxup").innerHTML=potenciastring;
 }
+}
+
+
+function calculopotenciatxdown(){
+document.getElementById("potenciatxdown").innerHTML='';
+var pot=document.getElementById('downpotenciatx').value;
+var arrayValores= new Array();
+	var arrayIds= new Array();
+arrayIds[0]='potenciatxdown';
+arrayValores[0]=pot;
+ //alert(valido);
+ valido=validarCampoVacio(arrayValores,arrayIds);
+
+if (valido==true){
+var potenciatotal=10*Math.log10(pot);
+potenciafixed=potenciatotal.toFixed(3);
+potenciastring=potenciafixed.toString().concat(' db');
+document.formpiredown.potxdown.value=potenciafixed;
+document.densidaddown.potantenadown.value=potenciafixed;
+localStorage["potxdown"]=potenciafixed;
+	document.getElementById("potenciatxdown").innerHTML=potenciastring;
+}
+}
+
+
 
 //Calculadora EIRP
 /* http://www.pasternack.com/t-calculator-eirp.aspx */
@@ -133,7 +172,7 @@ var arrayValores= new Array();
 	var potenciafinal=potenciatx
 	//alert(potenciafinal);
 	potenciafinal1=potenciafinal*1;
-	document.densidad.potantena.value=potenciafinal1;
+	//document.densidad.potantena.value=potenciafinal1;
 	//losscable1=losscable*1;
 	ganancia1=ganancia*1;
 	var val_pire=parseInt(potenciafinal1)+parseInt(ganancia1);
@@ -413,6 +452,7 @@ function cargadown(){
 function carga_resultados_up(){
 	//alert(localStorage["irl"]);
 	document.getElementById('gtxresult').innerHTML=localStorage["gtx"];
+	document.getElementById('ptxresult').innerHTML= localStorage["potx"];
 	document.getElementById('pireresult').innerHTML=localStorage["pire"];
 	document.getElementById('densidadresult').innerHTML=localStorage["density"];
 document.getElementById('fslresult').innerHTML=localStorage["fsl"];
@@ -426,6 +466,8 @@ document.getElementById('cnresult').innerHTML= localStorage["cn"];
 }
 
 function cargaResultadosDown(){
+	document.getElementById('ptxresultup').innerHTML=localStorage["potx"];
+	document.getElementById('ptxresultdown').innerHTML=localStorage["potxdown"];
 	document.getElementById('gtxresultdown').innerHTML=localStorage["gtxdown"];
 	document.getElementById('pireresultdown').innerHTML=localStorage["piredown"];
 	document.getElementById('densidadresultdown').innerHTML=localStorage["densitydown"];
@@ -632,11 +674,11 @@ var arrayValores= new Array();
 	
 	  valido=validarCampoVacio(arrayValores,arrayIds);	
 if(valido==true){
-	indice=document.formpiredown.units.selectedIndex; 
-	unidad=document.formpiredown.units.options[indice].value;
-	var potenciafinal=escala_watts(potenciatx,unidad);
+	//indice=document.formpiredown.units.selectedIndex; 
+	//unidad=document.formpiredown.units.options[indice].value;
+	var potenciafinal=potenciatx;
     //alert(potenciafinal);
-   document.densidaddown.potantenadown.value=potenciafinal.toFixed(3);
+   //document.densidaddown.potantenadown.value=potenciafinal.toFixed(3);
 	potenciafinal1=potenciafinal*1;
 	//losscable1=losscable*1;
 	ganancia1=ganancia*1;
