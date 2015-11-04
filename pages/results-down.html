@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de Enlaces Satelitales | Universidad de Pamplona</title>
+    <meta charset="UTF-8">
+    <!-- Le decimos al navegador que nuestra web esta optimizada para moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="../js/calculos.js">
+      </script>
+    <!-- Cargamos el CSS -->
+    
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/custom.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body onload="cargaResultadosDown()"> 
+      <nav class="blue darken-4">
+          <a href="#" class="brand-logo right titulo3-nav">Resultados</a>    
+          <ul id="slide-out" class="side-nav">
+            <li><a href="inicio.html"><i class="material-icons left">store</i>Inicio</a></li>
+            <li><a href="teoria.html"><i class="material-icons left">info</i>Teoria</a></li>
+            <li><a href="calculos.html"><i class="material-icons left">subtitles</i>Calculos</a></li>
+            <li><a href="recursos.html"><i class="material-icons left">receipt</i>Recursos</a></li>
+        </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+    </nav>  
+    <main>                 
+		<div class="row"> 	
+         <div class="card">  
+        	<table border="2px" class="striped">
+        		<th colspan="4" style="text-align: center;">Resultados Finales </th>
+     <tr>
+     	<th colspan="2" style="text-align: center;">UPLINK</th>
+     	<th colspan="2" style="text-align: center;">DOWNLINK</th>
+     </tr>   		
+    <tr>
+      <td style="text-align: center">Gtx</td>
+     <td id="gtxresultup" style="text-align: center">&nbsp;</td>
+      
+      <td style="text-align: center">Gtx</td>
+       <td id="gtxresultdown" style="text-align: center">&nbsp;</td>
+
+    </tr>
+    <tr>
+      <td style="text-align: center">Ptx</td>
+     <td id="ptxresultup" style="text-align: center">&nbsp;</td>
+      
+      <td style="text-align: center">Ptx</td>
+       <td id="ptxresultdown" style="text-align: center">&nbsp;</td>
+
+    </tr>
+    <tr>
+    
+      <td style="text-align: center">PIRE</td>
+      <td id="pireresultup" style="text-align: center">&nbsp;</td>
+      
+        <td style="text-align: center">PIRE</td> 
+      <td id="pireresultdown" style="text-align: center">&nbsp; </td>
+    </tr>
+    <tr>
+    
+      <td style="text-align: center">Omax</td>
+       <td id="densidadresultup" style="text-align: center">&nbsp; </td>
+      
+       <td style="text-align: center">Omax</td>
+      <td id="densidadresultdown" style="text-align: center">&nbsp;</td>
+    </tr>
+   <tr>
+    
+      <td style="text-align: center">IRL</td>
+      <td id="irlresult" style="text-align: center">&nbsp;</td>
+      
+       <td style="text-align: center">IRL</td>
+      <td id="irlresultdown" style="text-align: center">&nbsp; </td>
+    </tr> 
+  
+  <tr>
+    
+      <td style="text-align: center">FSL</td>
+      <td id="fslresultup" style="text-align: center">&nbsp; </td>
+      
+      
+       <td style="text-align: center">FSL</td>
+      <td id="fslresultdown" style="text-align: center">&nbsp;</td>
+    </tr>  
+    
+<tr>
+     <td style="text-align: center">Grx</td>
+      <td id="grxresultup" style="text-align: center">&nbsp; </td>
+      <td style="text-align: center">Grx</td>
+      <td id="grxresultdown" style="text-align: center">&nbsp;</td>
+    </tr>
+
+<tr>
+    
+      <td style="text-align: center">RSL</td>
+      <td id="rslresultup" style="text-align: center">&nbsp; </td>
+      
+      
+      <td style="text-align: center">RSL</td>
+      <td id="rslresultdown" style="text-align: center">&nbsp;</td>
+      
+    </tr>   
+    
+    <tr>
+    
+      <td style="text-align: center">G/T</td>
+      <td id="gtresultup" style="text-align: center">&nbsp; </td> 
+      <td style="text-align: center">G/T</td>
+       <td id="gtresultdown" style="text-align: center">&nbsp;</td>
+      
+    </tr>
+          
+     <tr>
+      <td style="text-align: center">C/N</td>
+      <td id="cnresultup" style="text-align: center">&nbsp; </td>
+      <td style="text-align: center">C/N</td>
+       <td id="cnresultdown" style="text-align: center">&nbsp; </td>
+    </tr>      
+    
+</table> 
+        	</div>
+        </div>
+    </main>
+     <div class="card">
+          <div class="row">
+              <div class="col s12">                   
+                  <h1 align="left"  class="titulo1">Volver a realizar calculos
+                      <a href="calculos.html" onclick="localStorage.clear();" class="btn-floating btn-large waves-effect waves-light red" >
+                          <i class="material-icons">send</i>
+                      </a>
+                  </h1>
+              </div>
+          </div>            
+        </div>
+    <footer class="page-footer blue darken-4">
+        <div class="footer-copyright">
+            <div class="container">
+                Universidad de Pamplona - Colombia
+                <a class="grey-text text-lighten-4 right" href="http://www.unipamplona.edu.co/">Web</a>
+            </div>
+        </div>
+        
+        
+    </footer>
+    <!-- Cargamos jQuery y materialize js -->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/feel.js"></script>
+    
+</body>

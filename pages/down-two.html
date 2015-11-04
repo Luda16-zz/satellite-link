@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de Enlaces Satelitales | Universidad de Pamplona</title>
+    <meta charset="UTF-8">
+    <!-- Le decimos al navegador que nuestra web esta optimizada para moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="../js/calculos.js">
+      </script>
+    <!-- Cargamos el CSS -->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/custom.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body onload="cargadown()"> 
+    <nav class="blue darken-4">
+        <a href="#" class="brand-logo right titulo3-nav">Downlink</a>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="inicio.html"><i class="material-icons left">store</i>Inicio</a></li>
+            <li><a href="teoria.html"><i class="material-icons left">info</i>Teoria</a></li>
+            <li><a href="calculos.html"><i class="material-icons left">subtitles</i>Calculos</a></li>
+            <li><a href="recursos.html"><i class="material-icons left">receipt</i>Recursos</a></li>
+        </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+    </nav>  
+    <main>                 
+
+
+  <section id="contacto" class="contacto">
+        <div class="row">
+        <div class="col s12 m6">
+          <div class="card">                
+                    <h1 class="titulo1">IRL (Nivel Isotropico de Recepcion)</h1> 
+                    <img src="../img/formulas/irl.png"/>
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Acerca</div>
+                              <div class="collapsible-body"><p>Este nivel indica como recibe la señal enviada desde tierra, alcanzando la antena receptora del satélite.
+                                </p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">filter_drama</i>PIRE</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header"><i class="material-icons">place</i>FSL</div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                        </ul>  
+
+                    <form class="col s12" name="formirldown" id="formirldown">
+                        <div class="row"> 
+                            <div class="col s6">
+                                <input  type="text" class="validate" id="irlpiredown" value="">
+                                <label for="">PIRE</label>
+                                <span id="irlpiredown_0" style="display: none;">Requerido</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                        
+                                <input  type="text" class="validate" id="irlfsldown" value="">
+                                <label for="">FSL</label>
+                                 <span id="irlfsldown_1" style="display: none;">Requerido</span>
+                             </div>
+                         </div>
+                                
+                        <button class="btn waves-effect waves-light" type="button" onclick="irlDown()" name="actionpire" id="actionpire">Calcular
+                            <i class="mdi-content-send right"></i>
+                         </button>
+                        <span id="valirldown" align="center" style="margin-left: 25%;"></span> 
+                    </form>
+                    <div class="card-action">
+                      <a href="recursos.html">Ayuda</a>                      
+                    </div>                    
+                </div>                 
+        </section>
+        <section id="contacto" class="contacto">
+            <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card">
+                <h1 class="titulo1">GRX (ganancia antena receptora)</h1>
+                <img src="../img/formulas/grx.png" />
+                <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Distancia en Pies</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>Frecuencua en MegaHertz</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Eficiencia Satelite</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul>    
+                            <form class="col s12" name="formulario">
+                                <div class="row">       
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="distpiesdown" value="">
+                                        <label for="">D=Distancia en Pies</label>
+                                         <span id="distpiesdown_0" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="frecuemhzdown" value="">
+                                        <label for="">F=Frecuencua en MegaHertz</label>
+                                        <span id="frecuemhzdown_1" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+								
+								<div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="eficisate2down" value="">
+                                        <label for="">&eta; =Eficiencia Satelite %</label>
+                                          <span id="eficisate2down_2" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="gananciaAntenaReceptoraDown()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button><span id="gainpxdown" align="center" style="margin-left: 25%;"></span>
+                            </form>
+                        </div>
+                   </div>                    
+                </div>
+        </section>
+         <section id="contacto" class="contacto">
+           <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card">
+               <h1 class="titulo1">RSL (Potencia de Recepci&oacute;n)</h1>
+                <img src="../img/formulas/rsl.png" />
+                <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>PIRE</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>Perdida en el espacio libre</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Ganancia Antena Receptora</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul> 
+                            <form class="col s12" name="formpotreceptdown">
+                                <div class="row">                                                                       
+                                    
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="piredown" value="" name="piredown">
+                                        <label for="">PIRE</label>
+                                         <span id="piredown_0" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="perdidadown" value="" name="perdidadown">
+                                        <label for="">FSL=Perdida en el espacio libre </label>
+                                        <span id="perdidadown_1" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+								
+								<div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="gananciareceptdown" value="" name="gananciareceptdown">
+                                        <label for="">GRX=Ganancia Antena Receptora</label>
+                                        <span id="gananciareceptdown_2" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="potenciaRecepcionDown()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button><span id="gainreceptdown" align="center" style="margin-left: 25%;"></span>
+                            </form>
+                        </div>
+                   </div>                    
+                </div>
+        
+        </section>
+        
+<section id="contacto" class="contacto">
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card">
+                <h4>G/T (Figura Merito)</h4>
+                <img src="../img/formulas/figura.png" />
+                <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Ganancia Antena Receptora</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>Temperatura</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>     
+                    </ul> 
+                            <form class="col s12" name="formfiguradown">
+                                <div class="row">                                                                       
+                                        
+                                        
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="gain2down" value="" name="gain2down">
+                                        <label for="">GRX=Ganancia Antena Receptora</label>
+                                         <span id="gain2down_0" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="tempdown" value="" name="tempdown">
+                                        <label for="">T=Temperatura (Grados Kelvin)</label>
+                                      <span id="tempdown_1" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="calculoFiguraDown()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button><span id="figurameritodown" align="center" style="margin-left: 25%;"></span>
+                            </form>
+                        </div>
+                   </div>                    
+                </div>
+          
+        </section>  
+        
+      <section id="contacto" class="contacto">
+      	      <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card">
+      	      <h1 class="titulo1">C/N (Densidad de Ruido)</h1>
+                <img src="../img/formulas/cn.png" />
+                
+                        	 <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>PIRE</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>Perdida en el espacio libre</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Figura Merito</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul> 
+                            <form class="col s12" name="formcnrdown">
+                                <div class="row">                                                                       
+                                        
+                                    <div class="col s6">
+                                        <input  type="text" class="validate" id="pirecnrdown" value="" name="pirecnrdown">
+                                        <label for="">PIRE</label>
+                                        <span id="pirecnrdown_0" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="perdidacnrdown" value="" name="perdidacnrdown">
+                                        <label for="">FSL=Perdida en el espacio libre</label>
+                                        <span id="perdidacnrdown_1" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+								
+								<div class="row">
+                                    <div class="col s6">
+                                        
+                                        <input  type="text" class="validate" id="figuracnrdown" value="" name="figuracnrdown">
+                                        <label for="">G/T=Figura Merito</label>
+                                        <span id="figuracnrdown_2" style="display: none;"> Requerido</span>
+                                    </div>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="button" onclick="lastDown()" name="actionpire" id="actionpire">Calcular
+                                    <i class="mdi-content-send right"></i>
+                                </button><span id="valcnrdown" align="center" style="margin-left: 25%;"></span>
+                            </form>
+                        </div>
+                   </div>                    
+                </div>
+        </section>
+    </main>
+     <div class="card">
+          <div class="row">
+              <div class="col s12">                   
+                  <h1 align="left"  class="titulo1">Ver resultados de DownLink
+                      <a href="results-down.html" class="btn-floating btn-large waves-effect waves-light red">
+                          <i class="material-icons">send</i>
+                      </a>
+                  </h1>
+              </div>
+          </div>            
+        </div>
+
+    <footer class="page-footer blue darken-4">
+        <div class="footer-copyright">
+            <div class="container">
+                Universidad de Pamplona - Colombia
+                <a class="grey-text text-lighten-4 right" href="http://www.unipamplona.edu.co/">Web</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Cargamos jQuery y materialize js -->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/feel.js"></script>
+    
+</body>

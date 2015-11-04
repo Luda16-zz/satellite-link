@@ -1,0 +1,324 @@
+/*!
+ * Funny Frontend (http://funnyfrontend.com)
+ * Copyright 2014-2015
+ */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400; 
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../font/material-design-icons/MaterialIcons-Regular.eot) format('woff2'),
+       url(../font/material-design-icons/MaterialIcons-Regular.woff) format('woff'),
+       url(../font/material-design-icons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+    font-family: Makhina;
+    src: url(../font/Makhina/makhina.ttf);
+}
+
+@font-face {
+    font-family: Moderne;
+    src: url(../font/Moderne/moderne.ttf);
+}
+
+
+html {
+    font-size: 16px;
+}
+
+main{
+  background:url(../img/kleiner-blue.jpg) no-repeat 0% 0%;
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position:relative;
+
+}
+
+  @media only screen and (max-width: 992px) {
+    
+  }
+
+  @media only screen and (max-width: 767px) {
+      
+  }
+
+  @media only screen and (max-width: 467px) {
+      
+  }
+
+
+
+.small-text{
+  padding: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: Moderne;
+  line-height: 150%;
+  font-size: 1em;
+}
+
+.big-text{
+  padding: 0;
+  margin: 0;
+  font-family: Moderne;
+  font-size: 2em;
+}
+
+.titulo1{
+    line-height: 1.3em !important;
+    font-family: Moderne;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.titulo2-white{
+    font-family: Makhina;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    top: 2em;
+    position: relative; 
+}
+
+.titulo3-nav{
+    font-family: Makhina;
+    font-size: 23px !important;
+    
+}
+
+h4{
+    font-family: Makhina;
+}
+.index{
+  text-align: center;
+  height: 100vh;
+}
+
+p{
+  text-align: justify;
+}
+
+.index-image{
+  height: 300px;
+  padding-top:  25px;  
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.index-button{
+  margin-right: 20px;  
+  margin-bottom: 20px;
+}
+
+.inicio-header {
+    text-align: center;
+    padding: 2em;
+    background-image: url("../img/fondo4.jpg");
+    background-repeat: no-repeat;
+    background-position: 40% 60%;
+    max-width: 100%;
+    height: 15em;
+    width: 100vw;
+}
+
+.over-card{
+      top: -60px;
+}
+
+.recursos-brand{
+    text-align: center;
+    padding: 2em;
+    background-image: url("../img/fondo2.jpg");
+    background-repeat: no-repeat;
+    background-position: 40% 60%;
+    max-width: 100%;
+    height: 15em;
+    width: 100vw;
+}
+
+.home-brand .logo {
+    margin-left: 20px;
+    height: 150px;
+}
+
+
+.home-brand .btn-floating {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    top: 58px;
+}
+
+.card{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+}
+
+.button-collapse {
+    margin-left: 25px;
+}
+
+ul.side-nav.fixed a {
+    color: whitesmoke;
+}
+
+ul.side-nav.fixed a:hover {
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+i.left {
+    padding-top: 20px;
+}
+
+section {
+    padding: 4% 0 4% 0;
+}
+
+#intro{
+    border-top: 8px solid rgba(0, 0, 0, 0.1);
+}
+
+form{
+  color: black;
+}
+
+section .col {
+    margin-bottom: 24px;
+}
+
+section h4 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px; 
+    color: black;   
+}
+
+section hr {
+    width: 40px;
+    margin-bottom: 45px;
+    border: 1px solid
+}
+
+.description-image img{
+  width: 90vw;
+  height: auto;
+}
+
+.habilidades i {
+    color: #ee6e73;
+    font-size: 7rem;
+    display: block;
+}
+
+footer.page-footer {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+/*** RESPONSIVO ***/
+
+@media only screen and (max-width: 992px) {
+    header ul.side-nav li a {
+        font-size: 1.7rem
+    }
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .intro img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .intro img {
+        width: 100%;
+    }
+}
+
+
+/************************************************************************************************
+                                   Inputs & Labels
+*************************************************************************************************/
+
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+        border: 2px solid #9e9e9e !important;    
+}
+
+input:focus, input[type=text]:focus{
+    border: 2px solid #26a69a !important;    
+}
+
+.unidad-medida{
+    position: absolute;
+}
+
+
+/************************************************************************************************
+                                  Video (Youtube)
+*************************************************************************************************/
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
