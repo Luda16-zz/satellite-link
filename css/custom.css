@@ -87,12 +87,6 @@ main{
   font-size: 1em;
 }
 
-.big-text{
-  padding: 0;
-  margin: 0;
-  font-family: Moderne;
-  font-size: 2em;
-}
 
 .titulo1{
     line-height: 1.3em !important;
@@ -115,6 +109,10 @@ main{
     font-family: Makhina;
     font-size: 23px !important;
     
+}
+.titulo3-options{
+  font-family: Moderne;
+  font-size: 0.8em;
 }
 
 h4{
