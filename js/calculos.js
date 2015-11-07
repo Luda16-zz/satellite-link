@@ -169,13 +169,13 @@ var arrayValores= new Array();
   if (valido==true){
 	//indice=document.form_pire.units.selectedIndex; 
 	//unidad=document.form_pire.units.options[indice].value;
-	var potenciafinal=potenciatx
+	var potenciafinal=potenciatx;
 	//alert(potenciafinal);
 	potenciafinal1=potenciafinal*1;
 	//document.densidad.potantena.value=potenciafinal1;
 	//losscable1=losscable*1;
 	ganancia1=ganancia*1;
-	var val_pire=parseInt(potenciafinal1)+parseInt(ganancia1);
+	var val_pire=potenciafinal1+ganancia1;
 	//-losscable;
 	val_pire=val_pire.toFixed(3);
 	//document.formirl.irlpire.value=val_pire;
@@ -218,6 +218,7 @@ function densidadmaxima(){
 	var val1=4*pi*Math.pow(distancia,2);
 	var val2=potenciatx*ganancia;
 	var val3=val2/val1;
+	//alert(val3);
 	var valfin=10*Math.log10(val3);
 	//var val_densidad=(potenciatx*ganancia/4*pi*Math.pow(distancia,2));
 	val4=valfin.toFixed(3);
