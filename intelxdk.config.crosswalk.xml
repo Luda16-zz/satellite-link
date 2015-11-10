@@ -7,11 +7,16 @@
 <name>calculadora-satelital</name>
 <content src="index.html"/>
 <access origin="*"/>
+<icon platform="android" src="android/drawable-ldpi/ic_launcher.png" density="ldpi" width="36" height="36"/>
+<icon platform="android" src="android/drawable-xhdpi/ic_launcher.png" density="xhdpi" width="96" height="96"/>
+<icon platform="android" src="android/drawable-mdpi/ic_launcher.png" density="mdpi" width="48" height="48"/>
+<icon platform="android" src="android/drawable-hdpi/ic_launcher.png" density="hdpi" width="72" height="72"/>
 <intelxdk:plugin intelxdk:name="Device" intelxdk:value="cordova-plugin-device" intelxdk:version="1.0.1" intelxdk:checksum="adfc61ba"/>
 <intelxdk:plugin intelxdk:name="Splashscreen" intelxdk:value="cordova-plugin-splashscreen" intelxdk:version="2.1.0" intelxdk:checksum="170efb68"/>
 <intelxdk:plugin intelxdk:name="Cordova Legacy Whitelist Plugin" intelxdk:value="cordova-plugin-legacy-whitelist" intelxdk:version="1.1.0"/>
 <preference name="android-minSdkVersion" value="14"/>
 <preference name="android-targetSdkVersion" value="19"/>
 <preference name="android-installLocation" value="auto"/>
+<preference name="Fullscreen" value="false"/>
 <intelxdk:crosswalk version="15"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>
