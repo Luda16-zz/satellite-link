@@ -181,7 +181,8 @@ var arrayValores= new Array();
 	//document.formirl.irlpire.value=val_pire;
 	calculos_result.pire=val_pire;
 	localStorage["pire"]=calculos_result.pire;
-	document.getElementById("valpire").innerHTML=calculos_result.pire;
+	document.getElementById("valpire").innerHTML=calculos_result.pire.concat(' db');;
+
 
 
 //return pire;
@@ -452,16 +453,16 @@ function cargadown(){
 //Aqui cargamos los datos en la tabla1
 function carga_resultados_up(){
 	//alert(localStorage["irl"]);
-	document.getElementById('gtxresult').innerHTML=localStorage["gtx"];
-	document.getElementById('ptxresult').innerHTML= localStorage["potx"];
-	document.getElementById('pireresult').innerHTML=localStorage["pire"];
-	document.getElementById('densidadresult').innerHTML=localStorage["density"];
-document.getElementById('fslresult').innerHTML=localStorage["fsl"];
-document.getElementById('irlresult').innerHTML= localStorage["irl"];
-document.getElementById('grxresult').innerHTML= localStorage["grx"];
-document.getElementById('rslresult').innerHTML= localStorage["rsl"];
-document.getElementById('gtresult').innerHTML= localStorage["gt"];
-document.getElementById('cnresult').innerHTML= localStorage["cn"];
+	document.getElementById('gtxresult').innerHTML=localStorage["gtx"].toString().concat(" Db");
+	document.getElementById('ptxresult').innerHTML= localStorage["potx"].toString().concat(" Db");
+	document.getElementById('pireresult').innerHTML=localStorage["pire"].toString().concat("Db");
+	document.getElementById('densidadresult').innerHTML=localStorage["density"].toString().concat("Db");
+document.getElementById('fslresult').innerHTML=localStorage["fsl"].toString().concat("Db");
+document.getElementById('irlresult').innerHTML= localStorage["irl"].toString().concat("Db");
+document.getElementById('grxresult').innerHTML= localStorage["grx"].toString().concat("Db");
+document.getElementById('rslresult').innerHTML= localStorage["rsl"].toString().concat("Db");
+document.getElementById('gtresult').innerHTML= localStorage["gt"].toString().concat("Db");
+document.getElementById('cnresult').innerHTML= localStorage["cn"].toString().concat("Db");
 
 	
 }
