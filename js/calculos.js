@@ -441,12 +441,12 @@ function carga(){
 }
 
 function cargadown(){
-	document.formpotreceptdown.piredown.value=localStorage["piredown"];
-	document.formpotreceptdown.perdidadown.value=localStorage["fsldown"];
-	document.formcnrdown.pirecnrdown.value=localStorage["piredown"];
-	document.formcnrdown.perdidacnrdown.value=localStorage["fsldown"];
-	document.formirldown.irlpiredown.value=localStorage["piredown"];
-	document.formirldown.irlfsldown.value=localStorage["fsldown"];
+	document.formpotreceptdown.piredown.value=localStorage["piredown"].toString().concat("Db");
+	document.formpotreceptdown.perdidadown.value=localStorage["fsldown"].toString().concat("Db");
+	document.formcnrdown.pirecnrdown.value=localStorage["piredown"].toString().concat("Db");
+	document.formcnrdown.perdidacnrdown.value=localStorage["fsldown"].toString().concat("Db");
+	document.formirldown.irlpiredown.value=localStorage["piredown"].toString().concat("Db");
+	document.formirldown.irlfsldown.value=localStorage["fsldown"].toString().concat("Db");
 }
 
 
